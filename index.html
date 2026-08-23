@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compte Amazon suspendu ou bloqué : défense et réactivation de votre compte vendeur</title>
+<meta name="description" content="Votre compte vendeur Amazon est suspendu, désactivé, ou un ASIN est bloqué ? Nous analysons les causes, réunissons les preuves et rédigeons la réponse à envoyer à Amazon. Diagnostic écrit sous 48 h.">
+<link rel="canonical" href="https://compte-amazon-bloque.fr/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://compte-amazon-bloque.fr/">
+<meta property="og:title" content="Compte Amazon suspendu ou bloqué : défense et réactivation de votre compte vendeur">
+<meta property="og:description" content="Nous analysons les causes du blocage, réunissons les preuves et rédigeons la réponse à envoyer à Amazon. Diagnostic écrit sous 48 h.">
+<meta property="og:site_name" content="Compte Amazon Bloqué">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Compte Amazon Bloqué",
+  "url": "https://compte-amazon-bloque.fr/",
+  "description": "Diagnostic et défense des comptes vendeurs Amazon suspendus, désactivés ou bloqués. Analyse des causes, constitution des preuves, rédaction de la réponse adressée à Amazon.",
+  "areaServed": "FR",
+  "priceRange": "€€",
+  "knowsLanguage": "fr"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Garantissez-vous la réactivation de mon compte ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non, et aucun prestataire sérieux ne peut le promettre : la décision finale appartient à Amazon. Nous nous engageons sur la qualité du dossier, la rigueur du suivi et une estimation honnête de vos chances avant de démarrer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quels sont les délais habituels d'une réactivation ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Les dossiers simples, liés aux performances ou aux retards, se règlent parfois en quelques jours. Les cas complexes comme la Section 3, les comptes liés ou la vérification KYC demandent le plus souvent un à trois mois, davantage en cas d'escalade."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quels documents faut-il réunir pour démarrer ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La notification reçue d'Amazon, une capture de l'état de santé de votre compte, l'historique des violations, et les documents que vous avez déjà envoyés si vous avez répondu vous-même."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Devrai-je vous donner accès à mon Seller Central ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pas toujours. Beaucoup de dossiers se traitent par simple échange écrit. Quand un accès est utile, il reste limité aux sections nécessaires, et votre mot de passe principal n'est jamais demandé."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Amazon a déjà refusé une première réponse : est-ce définitif ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non. Un refus s'analyse : nous cherchons ce qui a manqué, renforçons le dossier et préparons une nouvelle réponse, ou l'escalade si elle se justifie."
+      }
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink: #16233B;
+    --ink-2: #202F4C;
+    --paper: #F6F4EF;
+    --paper-2: #EDEAE0;
+    --line: rgba(22,35,59,0.14);
+    --line-soft: rgba(22,35,59,0.08);
+    --amber: #C97A2E;
+    --amber-soft: #F1E0C8;
+    --red: #A9432F;
+    --red-soft: #F1DCD6;
+    --green: #4B6E52;
+    --green-soft: #DCE6DB;
+    --white: #FFFDF9;
+    --shadow: 0 20px 50px -25px rgba(22,35,59,0.35);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    letter-spacing:-0.01em;
+    color:var(--ink);
+  }
+  .mono{
+    font-family:'IBM Plex Mono', monospace;
+    letter-spacing:0.03em;
+  }
+  a{color:inherit;}
+  img,svg{display:block; max-width:100%;}
+  .wrap{
+    max-width:1120px;
+    margin:0 auto;
+    padding:0 28px;
+  }
+  section{padding:96px 0;}
+  @media(max-width:720px){ section{padding:64px 0;} .wrap{padding:0 20px;} }
+
+  /* ---------- HEADER ---------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(246,244,239,0.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line-soft);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 28px; max-width:1120px; margin:0 auto;
+  }
+  .brand{
+    display:flex; align-items:center; gap:10px;
+    font-family:'Fraunces', serif; font-weight:600; font-size:1.05rem;
+  }
+  .brand .mark{
+    width:32px; height:32px; border-radius:7px;
+    background:var(--ink);
+    display:flex; align-items:center; justify-content:center;
+    flex-shrink:0;
+  }
+  .brand .mark svg{ width:17px; height:17px; }
+  .brand .mark svg .shackle{ stroke:var(--amber); }
+  .brand .mark svg .body{ fill:var(--paper); }
+  .nav-links{display:flex; gap:32px; font-size:0.92rem;}
+  .nav-links a{text-decoration:none; color:var(--ink); opacity:0.75; transition:opacity .2s;}
+  .nav-links a:hover{opacity:1;}
+  .nav-links{display:none;}
+  @media(min-width:840px){ .nav-links{display:flex;} }
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:12px 22px;
+    border-radius:8px;
+    font-size:0.92rem; font-weight:600;
+    text-decoration:none;
+    cursor:pointer; border:none;
+    transition:transform .15s ease, box-shadow .15s ease;
+    font-family:'IBM Plex Sans', sans-serif;
+  }
+  .btn:hover{ transform:translateY(-1px); }
+  .btn-primary{ background:var(--ink); color:var(--white); box-shadow:var(--shadow); }
+  .btn-primary:hover{ box-shadow:0 24px 46px -20px rgba(22,35,59,0.5); }
+  .btn-ghost{ background:transparent; color:var(--ink); border:1px solid var(--line); }
+  .btn-ghost:hover{ background:var(--paper-2); }
+  .btn-sm{ padding:9px 16px; font-size:0.85rem; }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    padding:76px 0 60px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero .wrap{
+    display:grid;
+    grid-template-columns:1.15fr 0.85fr;
+    gap:56px;
+    align-items:start;
+  }
+  @media(max-width:900px){ .hero .wrap{grid-template-columns:1fr;} }
+
+  .status-line{
+    display:inline-flex; align-items:center; gap:10px;
+    padding:6px 12px 6px 8px;
+    border:1px solid var(--line);
+    border-radius:100px;
+    font-size:0.78rem;
+    margin-bottom:28px;
+    background:var(--white);
+  }
+  .status-dot{
+    width:8px; height:8px; border-radius:50%;
+    background:var(--amber);
+    box-shadow:0 0 0 3px var(--amber-soft);
+    animation:pulse 2.4s ease-in-out infinite;
+  }
+  @keyframes pulse{
+    0%,100%{ box-shadow:0 0 0 3px var(--amber-soft); }
+    50%{ box-shadow:0 0 0 6px var(--amber-soft); }
+  }
+  @media (prefers-reduced-motion: reduce){ .status-dot{animation:none;} }
+
+  .hero h1{
+    font-size:clamp(2.1rem, 4.2vw, 3.25rem);
+    line-height:1.08;
+    margin-bottom:22px;
+  }
+  .hero h1 em{ font-style:italic; color:var(--amber); }
+  .hero .lede{
+    font-size:1.1rem;
+    color:rgba(22,35,59,0.78);
+    max-width:54ch;
+    margin-bottom:34px;
+  }
+  .hero-ctas{ display:flex; gap:14px; flex-wrap:wrap; margin-bottom:40px; }
+  .trust-row{
+    display:flex; gap:28px; flex-wrap:wrap;
+    padding-top:28px; border-top:1px solid var(--line-soft);
+    font-size:0.83rem; color:rgba(22,35,59,0.65);
+  }
+  .trust-row strong{ display:block; color:var(--ink); font-family:'Fraunces',serif; font-size:1.3rem; font-weight:600; }
+
+  /* Dossier card - signature element */
+  .dossier-card{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:6px;
+    box-shadow:var(--shadow);
+    overflow:hidden;
+  }
+  .dossier-head{
+    padding:18px 22px;
+    background:var(--ink);
+    color:var(--paper);
+    display:flex; justify-content:space-between; align-items:center;
+    font-size:0.78rem;
+  }
+  .dossier-head .ref{ font-family:'IBM Plex Mono',monospace; letter-spacing:-0.01em; font-weight:400; opacity:0.8; }
+  .dossier-head .badge{
+    background:var(--amber); color:var(--ink);
+    padding:3px 9px; border-radius:100px; font-weight:600; font-size:0.72rem;
+  }
+  .dossier-body{ padding:22px; }
+  .dossier-row{
+    display:flex; justify-content:space-between; align-items:center;
+    padding:13px 0;
+    border-bottom:1px solid var(--line-soft);
+    font-size:0.88rem;
+  }
+  .dossier-row:last-child{ border-bottom:none; }
+  .dossier-row .label{ color:rgba(22,35,59,0.6); }
+  .dossier-row .val{ font-weight:600; font-family:'IBM Plex Mono',monospace; font-size:0.82rem; }
+  .val.ok{ color:var(--green); }
+  .val.warn{ color:var(--amber); }
+  .val.pending{ color:rgba(22,35,59,0.45); }
+  .dossier-foot{
+    padding:16px 22px;
+    background:var(--paper-2);
+    font-size:0.78rem;
+    color:rgba(22,35,59,0.6);
+  }
+
+  /* ---------- SECTION HEADERS ---------- */
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    text-transform:uppercase;
+    font-size:0.75rem;
+    letter-spacing:0.12em;
+    color:var(--amber);
+    margin-bottom:14px;
+    display:block;
+  }
+  .sec-head{ max-width:680px; margin-bottom:52px; }
+  .sec-head h2{ font-size:clamp(1.6rem,3vw,2.3rem); margin-bottom:14px; }
+  .sec-head p{ color:rgba(22,35,59,0.68); font-size:1.02rem; }
+
+  /* ---------- SITUATIONS GRID ---------- */
+  .situations{ background:var(--white); border-top:1px solid var(--line-soft); border-bottom:1px solid var(--line-soft); }
+  .sit-grid{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:1px;
+    background:var(--line-soft);
+    border:1px solid var(--line-soft);
+    border-radius:6px;
+    overflow:hidden;
+  }
+  @media(max-width:920px){ .sit-grid{grid-template-columns:repeat(2,1fr);} }
+  @media(max-width:560px){ .sit-grid{grid-template-columns:1fr;} }
+  .sit-card{
+    background:var(--white);
+    padding:26px 22px;
+    transition:background .2s ease;
+  }
+  .sit-card:hover{ background:var(--paper); }
+  .sit-card .num{
+    font-family:'IBM Plex Mono',monospace; font-size:0.78rem; font-weight:500;
+    color:var(--amber); margin-bottom:10px; display:block;
+  }
+  .sit-card h3{ font-size:1.02rem; font-weight:600; margin-bottom:8px; font-family:'IBM Plex Sans',sans-serif; }
+  .sit-card p{ font-size:0.87rem; color:rgba(22,35,59,0.62); }
+
+  /* ---------- METHODE / TIMELINE ---------- */
+  .timeline{ counter-reset:step; }
+  .tl-item{
+    display:grid; grid-template-columns:64px 1fr;
+    gap:24px;
+    padding-bottom:44px;
+    position:relative;
+  }
+  .tl-item:last-child{ padding-bottom:0; }
+  .tl-item::before{
+    content:'';
+    position:absolute; left:31px; top:50px; bottom:0;
+    width:1px; background:var(--line);
+  }
+  .tl-item:last-child::before{ display:none; }
+  .tl-num{
+    width:64px; height:64px; border-radius:50%;
+    background:var(--white); border:1px solid var(--line);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Fraunces',serif; font-weight:600; font-size:1.3rem;
+    color:var(--ink); flex-shrink:0;
+    z-index:1;
+  }
+  .tl-content h3{ font-size:1.15rem; margin-bottom:8px; }
+  .tl-content p{ color:rgba(22,35,59,0.68); font-size:0.96rem; max-width:58ch; }
+
+  /* ---------- COMPARISON ---------- */
+  .compare{ background:var(--ink); color:var(--paper); }
+  .compare .sec-head h2{ color:var(--paper); }
+  .compare .sec-head p{ color:rgba(246,244,239,0.7); }
+  .compare-grid{ display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+  @media(max-width:760px){ .compare-grid{grid-template-columns:1fr;} }
+  .compare-col{
+    background:rgba(246,244,239,0.04);
+    border:1px solid rgba(246,244,239,0.14);
+    border-radius:6px;
+    padding:32px;
+  }
+  .compare-col.bad{ border-color:rgba(169,67,47,0.35); }
+  .compare-col.good{ border-color:rgba(75,110,82,0.4); }
+  .compare-col h3{
+    color:var(--paper); font-size:1.05rem; margin-bottom:20px;
+    display:flex; align-items:center; gap:10px;
+  }
+  .compare-col .tag{
+    width:8px; height:8px; border-radius:50%;
+  }
+  .compare-col.bad .tag{ background:var(--red); }
+  .compare-col.good .tag{ background:var(--green); }
+  .compare-col ul{ list-style:none; }
+  .compare-col li{
+    padding:12px 0; border-bottom:1px solid rgba(246,244,239,0.1);
+    font-size:0.92rem; color:rgba(246,244,239,0.82);
+  }
+  .compare-col li:last-child{ border-bottom:none; }
+
+  /* ---------- TARIFS ---------- */
+  .diag-banner{
+    display:grid; grid-template-columns:1fr auto;
+    gap:32px; align-items:center;
+    background:var(--ink); color:var(--paper);
+    border-radius:6px;
+    padding:36px 40px;
+    margin-bottom:24px;
+    box-shadow:var(--shadow);
+  }
+  @media(max-width:760px){ .diag-banner{grid-template-columns:1fr; padding:28px;} }
+  .diag-banner h3{ color:var(--paper); font-size:1.35rem; margin-bottom:8px; }
+  .diag-banner p{ color:rgba(246,244,239,0.75); font-size:0.94rem; max-width:56ch; }
+  .diag-banner .price-block{ text-align:right; }
+  @media(max-width:760px){ .diag-banner .price-block{text-align:left;} }
+  .diag-banner .amount{
+    font-family:'Fraunces',serif; font-size:2.3rem; font-weight:600; color:var(--paper);
+    line-height:1.1;
+  }
+  .diag-banner .unit{ font-size:0.8rem; color:rgba(246,244,239,0.6); margin-bottom:16px; }
+  .diag-banner .btn-light{
+    background:var(--amber); color:var(--ink);
+  }
+  .pricing-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+  @media(max-width:920px){ .pricing-grid{grid-template-columns:repeat(2,1fr);} }
+  @media(max-width:600px){ .pricing-grid{grid-template-columns:1fr;} }
+  .price-card{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:28px;
+    display:flex; flex-direction:column;
+  }
+  .price-card h3{ font-size:1.02rem; margin-bottom:8px; }
+  .price-card .desc{ font-size:0.86rem; color:rgba(22,35,59,0.6); margin-bottom:18px; flex-grow:1; }
+  .price-card .amount{
+    font-family:'Fraunces',serif; font-size:1.55rem; font-weight:600;
+  }
+  .price-card .amount .from{ font-family:'IBM Plex Sans',sans-serif; font-size:0.8rem; font-weight:400; color:rgba(22,35,59,0.55); display:block; }
+  .price-note{
+    margin-top:24px; font-size:0.88rem; color:rgba(22,35,59,0.65);
+    padding:18px 20px; background:var(--paper-2); border-radius:4px;
+    max-width:820px;
+  }
+
+
+  /* ---------- AVIS ---------- */
+  .avis{ background:var(--white); border-top:1px solid var(--line-soft); }
+  .avis-head{ display:grid; grid-template-columns:1fr auto; gap:32px; align-items:end; margin-bottom:36px; }
+  @media(max-width:760px){ .avis-head{grid-template-columns:1fr; align-items:start;} }
+  .avis-score{ text-align:right; }
+  @media(max-width:760px){ .avis-score{text-align:left;} }
+  .avis-score .stars{ color:var(--amber); font-size:1.15rem; letter-spacing:2px; }
+  .avis-score .num{ font-family:'Fraunces',serif; font-size:2.1rem; font-weight:600; line-height:1.1; }
+  .avis-score .count{ font-size:0.82rem; color:rgba(22,35,59,0.6); }
+
+  .avis-filters{ display:flex; flex-wrap:wrap; gap:8px; margin-bottom:28px; }
+  .fbtn{
+    padding:8px 15px; border:1px solid var(--line); border-radius:100px;
+    background:var(--paper); font-size:0.83rem; cursor:pointer;
+    font-family:'IBM Plex Sans',sans-serif; color:var(--ink);
+    transition:all .15s ease;
+  }
+  .fbtn:hover{ background:var(--paper-2); }
+  .fbtn.on{ background:var(--ink); color:var(--white); border-color:var(--ink); }
+  .fbtn .c{ opacity:0.55; font-size:0.78em; margin-left:4px; }
+
+  .avis-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+  @media(max-width:960px){ .avis-grid{grid-template-columns:repeat(2,1fr);} }
+  @media(max-width:640px){ .avis-grid{grid-template-columns:1fr;} }
+  .avis-card{
+    background:var(--paper); border:1px solid var(--line-soft);
+    border-radius:6px; padding:22px; display:flex; flex-direction:column;
+  }
+  .avis-card .top{ display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:12px; }
+  .avis-card .stars{ color:var(--amber); font-size:0.85rem; letter-spacing:1px; }
+  .avis-card .tag{
+    font-family:'IBM Plex Mono',monospace; font-size:0.66rem; text-transform:uppercase;
+    letter-spacing:0.06em; color:var(--ink); background:var(--amber-soft);
+    padding:3px 8px; border-radius:100px; white-space:nowrap;
+  }
+  .avis-card p{ font-size:0.89rem; color:rgba(22,35,59,0.78); margin-bottom:14px; flex-grow:1; }
+  .avis-card .sect{
+    font-size:0.79rem; color:rgba(22,35,59,0.55);
+    padding-top:12px; border-top:1px solid var(--line-soft);
+  }
+  .avis-more{ text-align:center; margin-top:28px; }
+  .avis-note{
+    margin-top:26px; font-size:0.8rem; color:rgba(22,35,59,0.55);
+    padding-top:18px; border-top:1px solid var(--line-soft); max-width:76ch;
+  }
+
+  /* ---------- FAQ ---------- */
+  .faq-list{ border-top:1px solid var(--line); }
+  .faq-item{ border-bottom:1px solid var(--line); }
+  .faq-q{
+    width:100%; text-align:left;
+    background:none; border:none; cursor:pointer;
+    padding:22px 0;
+    display:flex; justify-content:space-between; align-items:center;
+    gap:20px;
+    font-family:'IBM Plex Sans',sans-serif;
+    font-size:1rem; font-weight:600; color:var(--ink);
+  }
+  .faq-q .plus{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:1.1rem;
+    flex-shrink:0;
+    transition:transform .2s ease;
+    color:var(--amber);
+  }
+  .faq-item.open .faq-q .plus{ transform:rotate(45deg); }
+  .faq-a{
+    max-height:0; overflow:hidden;
+    transition:max-height .25s ease;
+  }
+  .faq-a p{
+    padding-bottom:22px; color:rgba(22,35,59,0.68); font-size:0.94rem; max-width:66ch;
+  }
+
+  /* ---------- SECTION REDACTIONNELLE ---------- */
+  .editorial{ background:var(--paper-2); }
+  .editorial .wrap{ max-width:820px; }
+  .editorial h2{ font-size:clamp(1.6rem,3vw,2.2rem); margin-bottom:14px; }
+  .editorial h3{
+    font-size:1.2rem; margin:40px 0 14px;
+    padding-top:28px; border-top:1px solid var(--line);
+  }
+  .editorial h3:first-of-type{ border-top:none; padding-top:0; margin-top:32px; }
+  .editorial p{
+    color:rgba(22,35,59,0.78);
+    font-size:1rem; margin-bottom:16px;
+  }
+  .editorial p:last-child{ margin-bottom:0; }
+
+  /* ---------- FORM ---------- */
+  .form-section{ background:var(--white); border-top:1px solid var(--line-soft); }
+  .form-wrap{
+    display:grid; grid-template-columns:0.85fr 1.15fr; gap:56px;
+  }
+  @media(max-width:900px){ .form-wrap{grid-template-columns:1fr;} }
+  .form-side h2{ font-size:clamp(1.6rem,3vw,2.1rem); margin-bottom:18px; }
+  .form-side p{ color:rgba(22,35,59,0.68); margin-bottom:28px; }
+  .form-side ul{ list-style:none; }
+  .form-side li{
+    display:flex; gap:12px; padding:12px 0;
+    border-top:1px solid var(--line-soft);
+    font-size:0.9rem;
+  }
+  .form-side li:first-child{ border-top:none; }
+  .form-side li .n{
+    font-family:'IBM Plex Mono',monospace; color:var(--amber); font-weight:600; flex-shrink:0;
+  }
+
+  form{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:36px;
+  }
+  .f-row{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  @media(max-width:520px){ .f-row{grid-template-columns:1fr;} }
+  .field{ margin-bottom:20px; }
+  .field label{
+    display:block; font-size:0.82rem; font-weight:600;
+    margin-bottom:7px; color:var(--ink);
+  }
+  .field .hint{ font-weight:400; color:rgba(22,35,59,0.5); font-size:0.78rem; }
+  .field input, .field select, .field textarea{
+    width:100%;
+    padding:12px 14px;
+    border:1px solid var(--line);
+    border-radius:4px;
+    background:var(--white);
+    font-family:'IBM Plex Sans',sans-serif;
+    font-size:0.94rem;
+    color:var(--ink);
+  }
+  .field input:focus, .field select:focus, .field textarea:focus{
+    outline:2px solid var(--ink);
+    outline-offset:1px;
+  }
+  .field textarea{ resize:vertical; min-height:110px; }
+  .chip-group{ display:flex; flex-wrap:wrap; gap:8px; }
+  .chip{
+    padding:9px 14px;
+    border:1px solid var(--line);
+    border-radius:100px;
+    font-size:0.83rem;
+    cursor:pointer;
+    background:var(--white);
+    transition:all .15s ease;
+    user-select:none;
+  }
+  .chip input{ display:none; }
+  .chip.checked{
+    background:var(--ink); color:var(--white); border-color:var(--ink);
+  }
+  .form-foot{
+    display:flex; align-items:center; justify-content:space-between;
+    gap:16px; flex-wrap:wrap;
+    margin-top:8px;
+  }
+  .form-foot .fine{ font-size:0.78rem; color:rgba(22,35,59,0.55); max-width:34ch; }
+  .success-box{
+    display:none;
+    text-align:center;
+    padding:40px 20px;
+  }
+  .success-box .check{
+    width:52px; height:52px; border-radius:50%;
+    background:var(--green-soft); color:var(--green);
+    display:flex; align-items:center; justify-content:center;
+    margin:0 auto 20px;
+    font-size:1.4rem;
+  }
+  .success-box h3{ margin-bottom:10px; }
+  .success-box p{ color:rgba(22,35,59,0.65); max-width:42ch; margin:0 auto; }
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    background:var(--ink); color:rgba(246,244,239,0.7);
+    padding:56px 0 32px;
+    font-size:0.86rem;
+  }
+  .foot-top{
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:32px;
+    padding-bottom:36px; margin-bottom:28px;
+    border-bottom:1px solid rgba(246,244,239,0.12);
+  }
+  .foot-brand{ max-width:320px; }
+  .foot-brand .brand{ color:var(--paper); margin-bottom:14px; }
+  .foot-cols{ display:flex; gap:56px; flex-wrap:wrap; }
+  .foot-col h4{
+    color:var(--paper); font-size:0.78rem; text-transform:uppercase;
+    letter-spacing:0.08em; margin-bottom:14px; font-family:'IBM Plex Mono',monospace; font-weight:500;
+  }
+  .foot-col a{ display:block; text-decoration:none; padding:5px 0; color:rgba(246,244,239,0.68); }
+  .foot-col a:hover{ color:var(--paper); }
+  .foot-bottom{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-size:0.78rem; color:rgba(246,244,239,0.45); }
+  .disclaimer{
+    margin-top:24px; padding-top:24px; border-top:1px solid rgba(246,244,239,0.12);
+    font-size:0.76rem; color:rgba(246,244,239,0.4); max-width:760px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand"><span class="mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path class="shackle" d="M8 10V7a4 4 0 0 1 7.5-1.9" stroke-width="2" stroke-linecap="round"/><rect class="body" x="5" y="10" width="14" height="10" rx="2"/><circle cx="12" cy="14.5" r="1.3" fill="#16233B"/><rect x="11.4" y="15" width="1.2" height="2.6" rx="0.6" fill="#16233B"/></svg></span>Compte&nbsp;Amazon&nbsp;Bloqué</div>
+    <nav class="nav-links">
+      <a href="#situations">Situations</a>
+      <a href="#methode">Méthode</a>
+      <a href="#avis">Avis</a>
+      <a href="#tarifs">Tarifs</a>
+      <a href="#comprendre">Comprendre</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a href="#formulaire" class="btn btn-primary btn-sm">Faire analyser mon dossier</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="status-line">
+        <span class="status-dot"></span>
+        <span class="mono">Diagnostic sous 48&nbsp;h</span>
+      </div>
+      <h1>Compte vendeur Amazon suspendu&nbsp;? <em>Nous prenons en charge</em> votre réactivation.</h1>
+      <p class="lede">Suspension, désactivation, ASIN bloqué, plainte, vérification KYC ou fonds retenus&nbsp;: nous analysons votre situation, trouvons la vraie cause du blocage et rédigeons, preuves à l'appui, la réponse à envoyer à Amazon pour débloquer et réactiver votre compte vendeur.</p>
+      <div class="hero-ctas">
+        <a href="#formulaire" class="btn btn-primary">Faire analyser mon dossier</a>
+        <a href="#methode" class="btn btn-ghost">Découvrir la méthode</a>
+      </div>
+      <div class="trust-row">
+        <div><strong>5,0/5</strong>Sur 98 avis clients</div>
+        <div><strong>48&nbsp;h</strong>Diagnostic écrit du dossier</div>
+        <div><strong>24&nbsp;h</strong>Premier retour ouvré</div>
+      </div>
+    </div>
+
+    <div class="dossier-card">
+      <div class="dossier-head">
+        <span class="ref">DOSSIER · REF-2026-0847</span>
+        <span class="badge">EN COURS</span>
+      </div>
+      <div class="dossier-body">
+        <div class="dossier-row">
+          <span class="label">Notification Amazon</span>
+          <span class="val ok">Analysée</span>
+        </div>
+        <div class="dossier-row">
+          <span class="label">Cause identifiée</span>
+          <span class="val ok">Confirmée</span>
+        </div>
+        <div class="dossier-row">
+          <span class="label">Pièces justificatives</span>
+          <span class="val warn">3/5 réunies</span>
+        </div>
+        <div class="dossier-row">
+          <span class="label">Plan d'action</span>
+          <span class="val warn">En rédaction</span>
+        </div>
+        <div class="dossier-row">
+          <span class="label">Transmission à Amazon</span>
+          <span class="val pending">À venir</span>
+        </div>
+      </div>
+      <div class="dossier-foot">Exemple illustratif. Chaque dossier réel bénéficie du même suivi écrit.</div>
+    </div>
+  </div>
+</section>
+
+<section class="situations" id="situations">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Cas pris en charge</span>
+      <h2>Compte Amazon suspendu, désactivé ou bloqué&nbsp;: les situations que nous traitons</h2>
+      <p>Chaque blocage Amazon a une cause précise, une règle qui s'y rattache et un bon canal de réponse. Voici les huit types de dossiers que nous rencontrons le plus souvent.</p>
+    </div>
+    <div class="sit-grid">
+      <div class="sit-card"><span class="num">01</span><h3>Compte suspendu</h3><p>Suspension pour performance ou au titre de la Section 3, souvent après une notification restée sans réponse adaptée.</p></div>
+      <div class="sit-card"><span class="num">02</span><h3>Compte Amazon désactivé</h3><p>Accès à Seller Central fermé, ventes à l'arrêt, fonds parfois gelés. La défense doit démarrer sans attendre.</p></div>
+      <div class="sit-card"><span class="num">03</span><h3>ASIN bloqué ou retiré</h3><p>Une ou plusieurs fiches produit désactivées, seules ou comme premier signe d'une suspension plus large.</p></div>
+      <div class="sit-card"><span class="num">04</span><h3>Plainte authenticité</h3><p>L'origine de vos produits est mise en cause. Amazon réclame des factures fournisseurs conformes et une autorisation de marque.</p></div>
+      <div class="sit-card"><span class="num">05</span><h3>Propriété intellectuelle</h3><p>Plainte sur une marque, un brevet ou un droit d'auteur. Elle peut toucher tout le catalogue si on la laisse traîner.</p></div>
+      <div class="sit-card"><span class="num">06</span><h3>Comptes liés</h3><p>Amazon détecte plusieurs comptes (adresse IP, coordonnées, données bancaires). Contestable avec un dossier bien documenté.</p></div>
+      <div class="sit-card"><span class="num">07</span><h3>Vérification KYC</h3><p>Identité refusée plusieurs fois, document incohérent ou vérification vidéo qui échoue.</p></div>
+      <div class="sit-card"><span class="num">08</span><h3>Fonds retenus</h3><p>Réserve après une plainte, retenue de 90 jours ou blocage après suspension. Récupération suivie par écrit.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="methode">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Méthode</span>
+      <h2>Notre méthode de réactivation, étape par étape</h2>
+      <p>Cinq étapes, toujours dans le même ordre. Rien n'est envoyé à Amazon sans votre accord écrit.</p>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-num">1</div>
+        <div class="tl-content">
+          <h3>Diagnostic du dossier</h3>
+          <p>Nous lisons la notification en entier, l'état de santé du compte et l'historique des violations. Vous recevez un retour écrit sous 48&nbsp;h qui précise la nature exacte du blocage.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-num">2</div>
+        <div class="tl-content">
+          <h3>Analyse de la cause réelle</h3>
+          <p>La cause affichée par Amazon est rarement la vraie cause. Nous séparons le symptôme visible du problème qu'il faut réellement régler.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-num">3</div>
+        <div class="tl-content">
+          <h3>Constitution des preuves</h3>
+          <p>Factures conformes, autorisations de marque, certificats produits, traçabilité fournisseur&nbsp;: nous réunissons et vérifions toutes les pièces avant d'écrire quoi que ce soit.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-num">4</div>
+        <div class="tl-content">
+          <h3>Réponse structurée</h3>
+          <p>Plan d'action ou réponse formelle, cohérent avec les pièces jointes. Chaque dossier est écrit sur mesure pour votre compte, jamais copié d'un modèle.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-num">5</div>
+        <div class="tl-content">
+          <h3>Suivi et escalade</h3>
+          <p>Nous gérons les relances et les refus. Si le blocage persiste, nous préparons l'escalade vers les voies de médiation possibles.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="compare">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Pourquoi la méthode importe</span>
+      <h2>Une réponse précipitée n'est jamais neutre</h2>
+      <p>Chaque réponse envoyée à Amazon rejoint votre dossier. Une réponse générique, modèle trouvé en ligne ou texte écrit sans vérifier les pièces, affaiblit souvent les suivantes.</p>
+    </div>
+    <div class="compare-grid">
+      <div class="compare-col bad">
+        <h3><span class="tag"></span>Réponse précipitée</h3>
+        <ul>
+          <li>Plan d'action générique, qu'Amazon repère tout de suite</li>
+          <li>Vraie cause non trouvée&nbsp;: on ne traite que le symptôme</li>
+          <li>Pièces incomplètes ou non conformes aux exigences d'Amazon</li>
+          <li>Un refus qui fragilise vos réponses suivantes</li>
+          <li>Aucune trace écrite du raisonnement en cas de litige</li>
+        </ul>
+      </div>
+      <div class="compare-col good">
+        <h3><span class="tag"></span>Dossier structuré</h3>
+        <ul>
+          <li>Réponse écrite sur mesure pour votre compte et votre notification</li>
+          <li>Vraie cause trouvée avant d'écrire la réponse</li>
+          <li>Pièces vérifiées selon les exigences d'Amazon</li>
+          <li>Plan d'escalade prêt si la première réponse est refusée</li>
+          <li>Votre accord écrit à chaque étape avant l'envoi</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="tarifs">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Tarifs indicatifs</span>
+      <h2>Une grille claire, cadrée par écrit avant tout démarrage</h2>
+      <p>Le prix final dépend du nombre d'ASIN, des marketplaces pays et de la complexité du dossier. Avant de démarrer, nous fixons par écrit le périmètre, les livrables et le calendrier.</p>
+    </div>
+
+    <div class="diag-banner">
+      <div>
+        <span class="eyebrow" style="margin-bottom:10px;">La porte d'entrée</span>
+        <h3>Diagnostic écrit du dossier</h3>
+        <p>Nous analysons votre situation par écrit et vous livrons le diagnostic sous 48&nbsp;h ouvrées, avec un appel de 15&nbsp;minutes inclus. Son montant est déduit de la mission si vous engagez sous 14&nbsp;jours.</p>
+      </div>
+      <div class="price-block">
+        <div class="amount">190&nbsp;€&nbsp;HT</div>
+        <div class="unit">livré sous 48&nbsp;h ouvrées</div>
+        <a href="#formulaire" class="btn btn-light">Demander mon diagnostic</a>
+      </div>
+    </div>
+
+    <div class="pricing-grid">
+      <div class="price-card">
+        <h3>Suspension de compte, cas simple</h3>
+        <div class="desc">Une seule marketplace, cause identifiée, dossier accessible.</div>
+        <div class="amount"><span class="from">à partir de</span>890&nbsp;€&nbsp;HT</div>
+      </div>
+      <div class="price-card">
+        <h3>Suspension complexe</h3>
+        <div class="desc">Comptes liés, vérification KYC, plusieurs marketplaces, Section&nbsp;3 contestée.</div>
+        <div class="amount"><span class="from">à partir de</span>1&nbsp;290&nbsp;€&nbsp;HT</div>
+      </div>
+      <div class="price-card">
+        <h3>Défense d'ASIN bloqué</h3>
+        <div class="desc">ASIN unique, demande documentaire ou mise en conformité standard.</div>
+        <div class="amount"><span class="from">à partir de</span>390&nbsp;€&nbsp;HT</div>
+      </div>
+      <div class="price-card">
+        <h3>Plainte authenticité</h3>
+        <div class="desc">Dossier de factures, traçabilité fournisseur, autorisation de marque.</div>
+        <div class="amount"><span class="from">à partir de</span>590&nbsp;€&nbsp;HT</div>
+      </div>
+      <div class="price-card">
+        <h3>Plainte propriété intellectuelle</h3>
+        <div class="desc">Marque, brevet ou droit d'auteur. Défense du dossier ou négociation.</div>
+        <div class="amount"><span class="from">à partir de</span>890&nbsp;€&nbsp;HT</div>
+      </div>
+      <div class="price-card">
+        <h3>Escalade, médiation, fonds retenus</h3>
+        <div class="desc">Médiation, recours et procédures de récupération de fonds.</div>
+        <div class="amount">Sur devis</div>
+      </div>
+    </div>
+
+    <div class="price-note">Nous travaillons en obligation de moyens, sans promesse de résultat&nbsp;: la décision finale appartient à Amazon. Si un dossier ne nous paraît pas défendable en l'état, nous vous le disons par écrit avant de démarrer.</div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Questions fréquentes</span>
+      <h2>Avant de nous confier votre dossier</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q">Garantissez-vous la réactivation de mon compte&nbsp;?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Non, et aucun prestataire sérieux ne peut le promettre&nbsp;: la décision finale appartient à Amazon. Nous nous engageons sur la qualité du dossier, la rigueur du suivi et une estimation honnête de vos chances avant de démarrer.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Quels sont les délais habituels d'une réactivation&nbsp;?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Les dossiers simples, liés aux performances ou aux retards, se règlent parfois en quelques jours. Les cas complexes comme la Section&nbsp;3, les comptes liés ou la vérification KYC demandent le plus souvent un à trois mois, davantage en cas d'escalade.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Quels documents faut-il réunir pour démarrer&nbsp;?<span class="plus">+</span></button>
+        <div class="faq-a"><p>La notification reçue d'Amazon, une capture de l'état de santé de votre compte, l'historique des violations, et les documents que vous avez déjà envoyés si vous avez répondu vous-même. Le formulaire ci-dessous vous guide.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Devrai-je vous donner accès à mon Seller Central&nbsp;?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Pas toujours. Beaucoup de dossiers se traitent par simple échange écrit. Quand un accès est utile, il reste limité aux sections nécessaires, et votre mot de passe principal n'est jamais demandé.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Amazon a déjà refusé une première réponse&nbsp;: est-ce définitif&nbsp;?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Non. Un refus s'analyse&nbsp;: nous cherchons ce qui a manqué, renforçons le dossier et préparons une nouvelle réponse, ou l'escalade si elle se justifie.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="avis" id="avis">
+  <div class="wrap">
+    <div class="avis-head">
+      <div>
+        <span class="eyebrow">Ils nous ont fait confiance</span>
+        <h2>Des dossiers réels, des comptes réactivés</h2>
+      </div>
+      <div class="avis-score">
+        <div class="stars">★★★★★</div>
+        <div class="num">5,0<span style="font-size:0.5em;opacity:0.5;">/5</span></div>
+        <div class="count">98 avis clients</div>
+      </div>
+    </div>
+
+    <div class="avis-filters" id="avis-filters">
+      <button class="fbtn on" data-f="all">Tous <span class="c">98</span></button>
+      <button class="fbtn" data-f="compte">Compte suspendu <span class="c">8</span></button>
+      <button class="fbtn" data-f="comptes-lies">Comptes liés <span class="c">3</span></button>
+      <button class="fbtn" data-f="kyc">Vérification KYC <span class="c">3</span></button>
+      <button class="fbtn" data-f="authenticite">Plainte authenticité <span class="c">12</span></button>
+      <button class="fbtn" data-f="pi">Propriété intellectuelle <span class="c">16</span></button>
+      <button class="fbtn" data-f="conformite">Conformité produit <span class="c">39</span></button>
+      <button class="fbtn" data-f="catalogue">Catalogue / variations <span class="c">7</span></button>
+      <button class="fbtn" data-f="asin">ASIN bloqué <span class="c">9</span></button>
+      <button class="fbtn" data-f="fonds">Fonds retenus <span class="c">1</span></button>
+    </div>
+
+    <div class="avis-grid" id="avis-grid"></div>
+
+    <div class="avis-more">
+      <button class="btn btn-ghost" id="avis-more-btn">Afficher plus d'avis</button>
+    </div>
+
+    <p class="avis-note">Avis recueillis auprès de vendeurs professionnels accompagnés dans le cadre de missions de défense de compte et de fiches produits sur les marketplaces. Les témoignages sont publiés sans nom ni raison sociale, à la demande des clients concernés, et seul le secteur d'activité est indiqué. Chaque dossier étant particulier, ces résultats ne préjugent pas de l'issue d'une nouvelle demande.</p>
+  </div>
+</section>
+
+<section class="editorial" id="comprendre">
+  <div class="wrap">
+    <span class="eyebrow">Comprendre</span>
+    <h2>Compte Amazon bloqué&nbsp;: comprendre ce qui vous arrive</h2>
+
+    <h3>Pourquoi Amazon suspend-il un compte vendeur&nbsp;?</h3>
+    <p>Amazon ne bloque jamais un compte au hasard. Derrière chaque suspension se trouve un déclencheur précis&nbsp;: indicateurs de performance dégradés (taux de commandes défectueuses, expéditions en retard), plainte d'un client ou d'une marque, produits jugés non conformes, documents d'identité refusés lors d'une vérification, ou soupçon de comptes multiples. La notification envoyée par Amazon cite toujours une règle, mais elle décrit rarement le vrai problème. C'est tout l'enjeu du diagnostic&nbsp;: identifier la cause profonde avant d'écrire la moindre réponse.</p>
+    <p>Certains blocages surviennent aussi sans faute du vendeur. Une vérification de routine, un signalement pour activité inhabituelle sur le compte, ou un contrôle réglementaire peuvent suspendre vos ventes du jour au lendemain, y compris sur un compte sain.</p>
+
+    <h3>Les premiers réflexes quand votre compte est suspendu</h3>
+    <p>Trois choses à faire, dans l'ordre. D'abord, lire la notification en entier et identifier le type exact de blocage&nbsp;: suspension de performance, désactivation Section&nbsp;3, blocage de fonds ou demande documentaire. Ensuite, rassembler les pièces avant de répondre&nbsp;: factures fournisseurs, autorisations de marque, justificatifs d'identité, historique des litiges. Enfin, ne rien envoyer dans la précipitation&nbsp;: Amazon lit votre première réponse avec plus d'attention que toutes les suivantes.</p>
+    <p>Ce qu'il ne faut pas faire est tout aussi important. N'ouvrez pas de second compte pour continuer à vendre&nbsp;: Amazon le détectera et le blocage deviendra presque irréversible. Ne multipliez pas les réponses identiques&nbsp;: chaque soumission rejetée affaiblit la suivante. Et méfiez-vous des plans d'action génériques trouvés en ligne&nbsp;: les équipes d'Amazon les reconnaissent immédiatement.</p>
+
+    <h3>Combien de temps pour réactiver un compte Amazon&nbsp;?</h3>
+    <p>Tout dépend de la cause. Un blocage documentaire simple peut se débloquer en quelques jours si les pièces sont conformes du premier coup. Une suspension de performance demande en général deux à six semaines, le temps de construire un plan d'action solide et d'obtenir une réponse. Les cas lourds, comme une désactivation au titre de la Section&nbsp;3, des comptes liés ou une vérification d'identité qui échoue en boucle, s'étalent le plus souvent sur un à trois mois. Chaque réponse rejetée allonge ces délais&nbsp;: d'où l'importance de viser juste dès la première soumission.</p>
+
+    <h3>Que devient votre activité pendant la suspension&nbsp;?</h3>
+    <p>Vos ventes s'arrêtent, mais pas vos obligations. Les commandes en cours doivent être expédiées, les retours traités, et vos fonds peuvent rester bloqués jusqu'à 90&nbsp;jours. Votre classement dans les résultats de recherche Amazon se dégrade jour après jour&nbsp;: plus la suspension dure, plus la reprise sera lente. C'est la raison pour laquelle nous traitons chaque dossier comme une urgence, avec un premier retour sous 24&nbsp;h ouvrées.</p>
+  </div>
+</section>
+
+<section class="form-section" id="formulaire">
+  <div class="wrap">
+    <div class="form-wrap">
+      <div class="form-side">
+        <span class="eyebrow">Première étape</span>
+        <h2>Décrivez votre dossier</h2>
+        <p>Sous 24&nbsp;h ouvrées, nous vous disons par écrit si nous pouvons vous accompagner. Si oui, vous recevez un diagnostic écrit sous 48&nbsp;h.</p>
+        <ul>
+          <li><span class="n">01</span>Vous décrivez votre situation dans le formulaire</li>
+          <li><span class="n">02</span>Nous vous confirmons par écrit sous 24&nbsp;h si votre dossier entre dans notre périmètre</li>
+          <li><span class="n">03</span>Vous recevez un diagnostic écrit sous 48&nbsp;h si vous voulez continuer</li>
+        </ul>
+      </div>
+
+      <div>
+        <form id="dossier-form">
+          <div class="f-row">
+            <div class="field">
+              <label for="prenom">Prénom</label>
+              <input type="text" id="prenom" name="prenom" required>
+            </div>
+            <div class="field">
+              <label for="nom">Nom</label>
+              <input type="text" id="nom" name="nom" required>
+            </div>
+          </div>
+          <div class="f-row">
+            <div class="field">
+              <label for="email">Adresse email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="field">
+              <label for="telephone">Téléphone <span class="hint">(facultatif)</span></label>
+              <input type="tel" id="telephone" name="telephone">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="type-blocage">Nature du blocage</label>
+            <select id="type-blocage" name="type_blocage" required>
+              <option value="">Sélectionnez votre situation</option>
+              <option>Compte suspendu</option>
+              <option>Compte désactivé</option>
+              <option>ASIN bloqué ou retiré</option>
+              <option>Plainte authenticité</option>
+              <option>Plainte propriété intellectuelle</option>
+              <option>Comptes liés</option>
+              <option>Vérification KYC</option>
+              <option>Fonds retenus</option>
+              <option>Autre situation</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label>Marketplace(s) concernée(s)</label>
+            <div class="chip-group" id="marketplace-chips">
+              <label class="chip"><input type="checkbox" value="Amazon.fr"> Amazon.fr</label>
+              <label class="chip"><input type="checkbox" value="Amazon.de"> Amazon.de</label>
+              <label class="chip"><input type="checkbox" value="Amazon.it"> Amazon.it</label>
+              <label class="chip"><input type="checkbox" value="Amazon.es"> Amazon.es</label>
+              <label class="chip"><input type="checkbox" value="Amazon.co.uk"> Amazon.co.uk</label>
+              <label class="chip"><input type="checkbox" value="Autre"> Autre</label>
+            </div>
+            <input type="hidden" id="marketplaces" name="marketplaces">
+          </div>
+
+          <div class="field">
+            <label for="details">Décrivez votre situation <span class="hint">(date du blocage, message reçu, démarches déjà entreprises)</span></label>
+            <textarea id="details" name="details" required></textarea>
+          </div>
+
+          <!-- Anti-spam : champ invisible, laissé vide par les humains -->
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;" aria-hidden="true">
+
+          <p id="form-error" style="display:none; color:#A9432F; font-size:0.85rem; margin-bottom:12px;"></p>
+
+          <div class="form-foot">
+            <p class="fine">En transmettant ce formulaire, vous acceptez d'être recontacté au sujet de votre dossier. Vos données ne sont communiquées à aucun tiers. Voir notre <a href="/politique-confidentialite" style="color:inherit;">politique de confidentialité</a>.</p>
+            <button type="submit" class="btn btn-primary" id="submit-btn">Transmettre mon dossier</button>
+          </div>
+        </form>
+
+        <div class="success-box" id="success-box">
+          <div class="check">✓</div>
+          <h3>Dossier bien reçu</h3>
+          <p>Nous reviendrons vers vous par écrit sous 24&nbsp;h ouvrées afin de vous confirmer la prise en charge de votre situation.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <div class="brand"><span class="mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path class="shackle" d="M8 10V7a4 4 0 0 1 7.5-1.9" stroke-width="2" stroke-linecap="round"/><rect class="body" x="5" y="10" width="14" height="10" rx="2"/><circle cx="12" cy="14.5" r="1.3" fill="#16233B"/><rect x="11.4" y="15" width="1.2" height="2.6" rx="0.6" fill="#16233B"/></svg></span>Compte&nbsp;Amazon&nbsp;Bloqué</div>
+        <p>Diagnostic et défense des comptes vendeurs bloqués sur les marketplaces. Analyse écrite, dossier de preuves, réponse structurée.</p>
+      </div>
+      <div class="foot-cols">
+        <div class="foot-col">
+          <h4>Services</h4>
+          <a href="#situations">Compte suspendu</a>
+          <a href="#situations">ASIN bloqué</a>
+          <a href="#tarifs">Tarifs</a>
+        </div>
+        <div class="foot-col">
+          <h4>Ressources</h4>
+          <a href="#methode">Méthode</a>
+          <a href="#faq">Questions fréquentes</a>
+        </div>
+        <div class="foot-col">
+          <h4>Contact</h4>
+          <a href="#formulaire">Faire analyser mon dossier</a>
+          <a href="mailto:hello@compte-amazon-bloque.fr">hello@compte-amazon-bloque.fr</a>
+        </div>
+        <div class="foot-col">
+          <h4>Légal</h4>
+          <a href="/mentions-legales">Mentions légales</a>
+          <a href="/politique-confidentialite">Confidentialité</a>
+          <a href="/cgv">CGV</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Compte Amazon Bloqué. Tous droits réservés.</span>
+      <span>Service indépendant, sans lien avec Amazon.com, Inc.</span>
+    </div>
+    <div class="disclaimer">
+      «&nbsp;Amazon&nbsp;» est une marque déposée d'Amazon.com, Inc. ou de ses filiales, mentionnée sur ce site à titre strictement descriptif afin de désigner l'objet du service proposé. Ce site n'est ni affilié, ni approuvé, ni sponsorisé par Amazon.
+    </div>
+  </div>
+</footer>
+
+<script>
+
+  // ---------- AVIS ----------
+  const AVIS = [{"s": "Mode et accessoires", "t": "Mon compte Seller Central avait été suspendu après plusieurs alertes que je n'avais pas correctement traitées. J'avais déjà envoyé deux réponses à Amazon sans succès. L'accompagnement m'a permis de comprendre ce qui bloquait et de présenter un dossier beaucoup plus structuré. Le compte a finalement été réactivé.", "c": "compte"}, {"s": "Maison et décoration", "t": "Compte Amazon désactivé du jour au lendemain avec une partie de mes fonds bloqués. J'étais complètement perdu face aux réponses automatiques du support. Mon dossier a été repris de A à Z, avec une analyse des notifications et la préparation de la réponse à envoyer. Le compte a finalement été réactivé.", "c": "compte"}, {"s": "Beauté et cosmétique", "t": "Nous avions reçu une plainte pour authenticité sur plusieurs produits et Amazon demandait des factures et justificatifs fournisseurs. Tout le dossier a été vérifié avant envoi et la réponse a été construite de façon très claire. La violation a été levée et nous avons pu reprendre les ventes.", "c": "authenticite"}, {"s": "Électronique grand public", "t": "Suspension Section 3 avec demande de justificatifs sur l'origine des produits. J'avais déjà essayé de régler le problème seul mais mes documents étaient systématiquement refusés. L'accompagnement a permis d'identifier les éléments qui posaient problème et de préparer une nouvelle réponse. Compte débloqué.", "c": "compte"}, {"s": "Sport et loisirs", "t": "Notre Account Health était devenu très mauvais après plusieurs violations accumulées et le compte a fini par être suspendu. Nous avons repris chaque notification une par une et préparé un plan d'action beaucoup plus précis. Amazon a accepté l'appel et le compte est de nouveau actif.", "c": "compte"}, {"s": "Accessoires automobile", "t": "Très bon accompagnement suite à une plainte de propriété intellectuelle qui avait bloqué plusieurs ASIN. J'avais du mal à comprendre ce qu'Amazon attendait réellement. Le dossier a été analysé rapidement et j'ai été guidé sur les justificatifs et les démarches à effectuer. Les fiches ont été réactivées.", "c": "pi"}, {"s": "Jouets et jeux", "t": "Amazon avait détecté un autre compte lié au mien et avait suspendu mon Seller Central. Nous avons identifié les éléments pouvant créer le rapprochement entre les comptes et constitué un dossier complet pour expliquer la situation. Après plusieurs échanges, Amazon a finalement réactivé le compte.", "c": "comptes-lies"}, {"s": "Équipement professionnel", "t": "Blocage pour comptes liés après la création d'une seconde société. Mes premières réponses au support Amazon n'avaient rien donné. L'accompagnement m'a aidé à expliquer précisément la relation entre les deux structures et à fournir les bons justificatifs. Le dossier a été accepté.", "c": "comptes-lies"}, {"s": "Textile", "t": "Cela faisait plusieurs semaines que mes documents KYC étaient refusés sans explication claire. Passeport, Kbis et justificatif de domicile : j'avais l'impression de tourner en rond. Tout a été vérifié pour identifier les incohérences et la vérification a enfin été validée.", "c": "kyc"}, {"s": "Cuisine et arts de la table", "t": "Vérification d'identité bloquée après plusieurs tentatives et impossible d'obtenir une réponse utile du support. J'ai été accompagné sur la préparation des documents et sur les échanges avec Amazon. La procédure a finalement été débloquée et j'ai récupéré l'accès complet au compte.", "c": "kyc"}, {"s": "Bricolage", "t": "Nous avions une retenue de fonds importante après la suspension du compte et aucune visibilité sur la procédure. J'ai été accompagné dans les différentes relances et dans la constitution du dossier demandé par Amazon. Le processus a été long mais nous avons fini par récupérer les fonds.", "c": "fonds"}, {"s": "Produits pour animaux", "t": "Suite à une plainte d'authenticité, Amazon avait suspendu notre compte et bloqué notre solde. L'analyse du dossier a été très complète : factures, fournisseur, historique des commandes et réponses déjà envoyées. Nous avons pu envoyer un dossier beaucoup plus solide et obtenir la réactivation du compte.", "c": "authenticite"}, {"s": "Mobilité urbaine", "t": "J'avais reçu une notification Section 7 que je ne comprenais pas et mon activité Amazon était complètement à l'arrêt. Mon historique et les messages reçus ont réellement été analysés avant de préparer le recours. Le compte a finalement été rétabli.", "c": "compte"}, {"s": "Literie et linge de maison", "t": "Après trois refus d'Amazon, je pensais ne plus pouvoir récupérer mon compte. Le problème venait de plusieurs violations qui s'étaient accumulées sans avoir été correctement résolues. Nous avons repris tout l'historique et refait le plan d'action. Cette fois Amazon l'a accepté.", "c": "compte"}, {"s": "Papeterie et fournitures de bureau", "t": "Une plainte de marque avait entraîné la suppression de plusieurs références et commençait à mettre en danger tout notre compte vendeur. J'ai été accompagné pour comprendre l'origine exacte de la plainte et préparer les démarches adaptées. Les ASIN concernés ont pu être réactivés.", "c": "pi"}, {"s": "Accessoires high-tech", "t": "Mon compte avait été désactivé et mes réponses au support étaient systématiquement rejetées avec les mêmes messages automatiques. Le dossier a été restructuré en allant directement sur les éléments attendus par Amazon. Après le nouvel envoi, la suspension a été levée.", "c": "compte"}, {"s": "Mobilier", "t": "Notre compte professionnel était bloqué à cause d'un problème de vérification entre les informations du Kbis et celles renseignées dans Seller Central. Le problème a été identifié, les documents remis en cohérence et la vérification a été validée.", "c": "kyc"}, {"s": "Outillage", "t": "Je recommande cet accompagnement pour les situations de comptes liés. Dans notre cas, le dossier était complexe avec une ancienne société et un ancien compte Amazon. Tout a été repris dans l'ordre et présenté clairement. Le compte a finalement été réactivé.", "c": "comptes-lies"}, {"s": "Hygiène et entretien", "t": "Plusieurs plaintes clients avaient fait chuter notre Account Health et nous étions proches de la suspension. L'accompagnement nous a permis de traiter les violations correctement et surtout de mettre en place les actions nécessaires pour éviter qu'elles se reproduisent.", "c": "compte"}, {"s": "Chaussures", "t": "Après une suspension pour authenticité, Amazon demandait des documents très précis concernant notre fournisseur. Le dossier a été contrôlé et retravaillé avant envoi. Amazon a accepté les justificatifs et réactivé le compte.", "c": "authenticite"}, {"s": "Beauté et cosmétique", "t": "Amazon avait désactivé l'un de nos ASIN à la suite d'une plainte concernant l'authenticité du produit. Malgré l'envoi de nos factures, nos premières contestations étaient refusées. Les justificatifs ont été vérifiés et la réponse reformulée correctement. L'ASIN a finalement été réactivé.", "c": "authenticite"}, {"s": "Électroménager", "t": "Une de nos meilleures ventes a été supprimée après une plainte d'authenticité et nous ne comprenions pas pourquoi nos factures fournisseurs n'étaient pas acceptées. L'accompagnement nous a permis d'identifier ce qui manquait dans le dossier. Produit remis en vente.", "c": "authenticite"}, {"s": "Accessoires de mode", "t": "Nous avions un ASIN bloqué pour suspicion de produit non authentique alors que nous travaillons avec un fournisseur officiel. Les factures et autorisations ont été contrôlées avant envoi et Amazon a finalement levé la restriction.", "c": "authenticite"}, {"s": "Sport et fitness", "t": "Une plainte de propriété intellectuelle avait entraîné la désactivation immédiate de notre produit. Nous ne savions pas s'il fallait répondre à Amazon ou directement au titulaire de la marque. Nous avons été guidés étape par étape et avons pu obtenir la réactivation de l'ASIN.", "c": "pi"}, {"s": "Décoration", "t": "ASIN supprimé suite à une plainte de marque déposée alors que nous pensions être parfaitement en règle. L'analyse a permis d'identifier précisément l'élément du listing qui posait problème. Une fois la fiche corrigée et le dossier envoyé, Amazon a accepté notre demande de réactivation.", "c": "pi"}, {"s": "Édition et loisirs créatifs", "t": "Nous avons reçu une plainte pour utilisation non autorisée d'un visuel protégé. Le produit a été désactivé très rapidement. L'accompagnement nous a permis de corriger les images concernées et de constituer une réponse beaucoup plus précise. L'ASIN est de nouveau actif.", "c": "asin"}, {"s": "Électronique", "t": "Amazon nous demandait des documents de conformité pour un produit électronique et nous ne savions pas quels certificats fournir. Après vérification du dossier technique, nous avons pu envoyer les documents réellement attendus. La référence a été réactivée.", "c": "conformite"}, {"s": "Puériculture", "t": "Plusieurs ASIN avaient été bloqués à cause des exigences GPSR. Nous avions pourtant renseigné une partie des informations dans Seller Central mais certaines données étaient manquantes. Tout a été repris méthodiquement et les produits ont pu être remis en vente.", "c": "conformite"}, {"s": "Produits d'entretien", "t": "Notre produit a été considéré par Amazon comme appartenant à une catégorie restreinte et retiré du catalogue. Nous avions déjà envoyé plusieurs documents sans succès. Le dossier de conformité a été repris entièrement et l'ASIN a finalement été accepté.", "c": "conformite"}, {"s": "Chimie grand public", "t": "Amazon demandait une FDS pour notre produit mais nous ne comprenions pas pourquoi la référence avait été bloquée ni comment répondre correctement. Nous avons été accompagnés pour réunir les bons documents et déposer la contestation au bon endroit. Produit réactivé.", "c": "conformite"}, {"s": "Mode", "t": "Nous avions laissé passer une demande de factures envoyée par Amazon et l'ASIN avait été automatiquement désactivé. Impossible ensuite de le remettre en vente malgré plusieurs contacts avec le support. Le dossier a été repris avec les justificatifs nécessaires et la référence a été débloquée.", "c": "asin"}, {"s": "Maison", "t": "Une notification Amazon était passée inaperçue et nous n'avions pas répondu dans le délai demandé. Résultat : notre produit principal avait été supprimé du catalogue. L'accompagnement nous a permis de comprendre quelle demande était restée sans réponse et de constituer le dossier pour récupérer l'ASIN.", "c": "asin"}, {"s": "Bien-être", "t": "Notre fiche produit a été supprimée à cause de mentions considérées comme médicales dans le titre et les bullets. Le contenu a été entièrement vérifié et corrigé avant de demander la réactivation. L'ASIN est revenu en ligne.", "c": "conformite"}, {"s": "Accessoires auto", "t": "Amazon avait bloqué une variation complète en considérant que certains produits n'avaient pas le droit d'être regroupés ensemble. Plusieurs références étaient devenues indisponibles. L'accompagnement nous a permis de restructurer correctement le catalogue et de récupérer les ASIN.", "c": "catalogue"}, {"s": "Cosmétique", "t": "Notre produit avait été désactivé pour des claims présents dans les images. Nous avions modifié le titre et la description mais Amazon continuait de refuser la réactivation. Le problème a été identifié dans une image secondaire. Une fois corrigée, la référence a pu être réactivée.", "c": "conformite"}, {"s": "Coffrets cadeaux", "t": "Nous avions créé un bundle qui fonctionnait depuis plusieurs mois avant qu'Amazon ne le supprime. L'accompagnement a permis d'identifier que la structure du listing n'était pas conforme aux règles Amazon. La fiche a été corrigée et nous avons pu remettre le produit en vente.", "c": "catalogue"}, {"s": "Équipement de la maison", "t": "Amazon a retiré notre ASIN du jour au lendemain pour une raison Health & Safety alors que nous n'avions reçu aucune plainte client. Un dossier complet de conformité a été préparé et Amazon a finalement accepté de réactiver la référence.", "c": "conformite"}, {"s": "Outdoor", "t": "Produit supprimé pour Restricted Products alors qu'il était vendu sur Amazon depuis plus de deux ans. Mes premières demandes recevaient uniquement des réponses automatiques. Le dossier a été repris avec les documents techniques et une argumentation structurée. L'ASIN a été débloqué.", "c": "conformite"}, {"s": "Cosmétique", "t": "Une référence cosmétique importante avait été retirée par Amazon pour un problème de conformité. Nous avions tous les documents du fabricant mais nous ne savions pas lesquels transmettre. L'accompagnement nous a permis de constituer le bon dossier et de récupérer la fiche produit.", "c": "conformite"}, {"s": "Électronique", "t": "Très bon accompagnement pour un ASIN désactivé sans raison évidente. Après analyse des notifications, il s'agissait finalement d'un contrôle de conformité Amazon et non d'une plainte client. Les documents nécessaires ont été identifiés et le produit est de nouveau disponible.", "c": "conformite"}, {"s": "Jouets", "t": "Notre jouet a été désactivé après une demande de rapports de tests que nous n'avions pas correctement comprise. Les certificats du laboratoire ont été vérifiés, les pièces manquantes identifiées et le dossier remis dans le bon ordre. Amazon a validé la conformité et l'ASIN est revenu en vente.", "c": "conformite"}, {"s": "Compléments alimentaires", "t": "Un de nos produits a été retiré à cause de claims jugés non conformes. Nous avions déjà modifié la fiche mais cela ne suffisait pas. L'accompagnement a permis de reprendre le contenu, les images et les justificatifs. La référence a finalement été réactivée.", "c": "conformite"}, {"s": "Équipement électrique", "t": "Amazon demandait des preuves de conformité CE et des documents techniques sur une référence qui réalisait une part importante de nos ventes. Nous avons été accompagnés pour réunir le bon dossier et répondre précisément à la demande. L'ASIN a été débloqué.", "c": "conformite"}, {"s": "Accessoires pour smartphone", "t": "Une plainte de brevet avait entraîné la suppression d'un de nos produits. Le dossier a été analysé avec précision pour comprendre ce qui était réellement contesté. Nous avons pu préparer une réponse claire et fournir les éléments demandés. La référence a été réactivée.", "c": "pi"}, {"s": "Textile enfant", "t": "Amazon avait désactivé plusieurs tailles d'un même produit à la suite d'un problème de variation. Nous avions peur de casser toute la famille. L'accompagnement a permis de remettre la structure à plat sans perdre les fiches. Les variantes ont été restaurées progressivement.", "c": "catalogue"}, {"s": "Équipement de jardin", "t": "Un ASIN historique a été supprimé après une alerte de sécurité produit. Nous ne savions pas comment contester alors que nous avions les certificats nécessaires. Le dossier technique a été repris et présenté correctement. Amazon a accepté la réactivation.", "c": "conformite"}, {"s": "Accessoires vélo", "t": "Notre fiche a été bloquée pour propriété intellectuelle à cause d'un terme présent dans le titre. L'origine du problème a été identifiée rapidement, le contenu corrigé et la contestation préparée. Le produit a pu être remis en vente sans recréer de nouvelle fiche.", "c": "pi"}, {"s": "Équipement bébé", "t": "Nous avions reçu une demande de conformité sur un produit bébé avec plusieurs documents à fournir. Le dossier était difficile à comprendre et chaque refus semblait automatique. L'accompagnement nous a permis de présenter les certificats dans le format attendu et l'ASIN a été validé.", "c": "conformite"}, {"s": "Cuisine", "t": "Amazon avait classé à tort notre produit dans une catégorie nécessitant des documents supplémentaires. Après analyse, nous avons pu expliquer la nature réelle de la référence et fournir les éléments techniques adaptés. Le blocage a été levé.", "c": "asin"}, {"s": "Cosmétique naturelle", "t": "Une plainte concernant l'authenticité avait désactivé notre best-seller. Nos factures étaient valides mais mal présentées et certaines informations n'étaient pas suffisamment visibles. Le dossier a été retravaillé et Amazon a finalement accepté les justificatifs.", "c": "authenticite"}, {"s": "Accessoires ordinateur", "t": "Nous avons eu une désactivation pour suspicion de contrefaçon sur un accessoire informatique. Le fournisseur était pourtant officiel. L'accompagnement nous a permis de réunir factures, coordonnées du distributeur et preuve de traçabilité. La référence a été réactivée.", "c": "pi"}, {"s": "Éclairage", "t": "Un produit LED a été bloqué pour conformité électrique. Amazon demandait plusieurs documents que nous n'avions jamais eu à fournir auparavant. Nous avons été guidés sur les pièces à récupérer auprès du fabricant et le dossier a été accepté.", "c": "conformite"}, {"s": "Maison et rangement", "t": "Notre ASIN avait disparu à la suite d'une demande de documents restée sans réponse pendant nos congés. Nous pensions devoir recréer la fiche. L'accompagnement a permis de rouvrir le dossier existant et de fournir les justificatifs nécessaires. Le produit a été réactivé.", "c": "asin"}, {"s": "Accessoires de voyage", "t": "Une plainte de marque concernait un mot utilisé dans nos bullets. Le produit a été désactivé alors que nous n'avions jamais eu de problème auparavant. Après correction du listing et préparation de la réponse, Amazon a rétabli l'ASIN.", "c": "pi"}, {"s": "Hygiène", "t": "Amazon avait bloqué une référence pour un claim santé présent sur le packaging visible dans les images. Nous n'avions pas identifié ce détail. L'analyse complète de la fiche a permis de trouver le point bloquant et de corriger les visuels. L'ASIN a été remis en vente.", "c": "conformite"}, {"s": "Accessoires animaux", "t": "Un produit pour animaux a été retiré dans le cadre d'un contrôle Restricted Products. Nous avons été accompagnés pour vérifier la classification du produit et préparer les documents nécessaires. Après plusieurs échanges, Amazon a levé la restriction.", "c": "conformite"}, {"s": "Équipement de sécurité", "t": "Amazon demandait une documentation technique très précise pour un produit de sécurité. Nous avions envoyé les certificats mais le dossier était systématiquement refusé. L'accompagnement a permis d'identifier les documents manquants et la référence a été réactivée.", "c": "conformite"}, {"s": "Bagagerie", "t": "Notre ASIN avait été désactivé à cause d'une plainte d'authenticité venant d'un acheteur. Nous avons pu prouver l'origine des produits avec les factures et la chaîne d'approvisionnement. La réponse a été préparée de manière claire et Amazon a accepté la réactivation.", "c": "authenticite"}, {"s": "Papeterie", "t": "Une image de notre fiche avait déclenché une plainte pour droit d'auteur. Nous n'avions pas compris que le problème venait uniquement d'un visuel. Une fois l'image remplacée et le dossier envoyé, l'ASIN a été réactivé rapidement.", "c": "pi"}, {"s": "Produits capillaires", "t": "Amazon avait supprimé notre produit pour des allégations considérées comme thérapeutiques. Le listing a été revu ligne par ligne pour retirer les formulations problématiques tout en conservant un contenu commercial. Le recours a ensuite été accepté.", "c": "conformite"}, {"s": "Accessoires photo", "t": "Une plainte de propriété intellectuelle a bloqué une référence importante de notre catalogue. Nous avons été accompagnés pour identifier la plainte exacte, vérifier nos droits d'utilisation et préparer la réponse. L'ASIN a été réactivé sans perdre ses avis.", "c": "pi"}, {"s": "Bricolage", "t": "Notre produit a été classé comme dangereux et retiré alors qu'il s'agissait d'un accessoire standard. Le dossier de conformité a été préparé avec les informations du fabricant et les fiches techniques. Amazon a revu sa décision et remis la référence en vente.", "c": "conformite"}, {"s": "Mobilité électrique", "t": "Un accessoire pour trottinette a été retiré pour problème de conformité. Amazon demandait des informations techniques que notre fournisseur ne nous avait jamais transmises. Nous avons été guidés pour récupérer les bonnes pièces et répondre correctement. Produit réactivé.", "c": "conformite"}, {"s": "Cuisine", "t": "Nous avions une variation parent-enfant incorrecte et Amazon avait supprimé plusieurs enfants. Le catalogue a été analysé avant toute modification pour éviter d'aggraver la situation. La variation a été reconstruite proprement et les références sont revenues en ligne.", "c": "catalogue"}, {"s": "Mode homme", "t": "Un ASIN a été bloqué pour suspicion d'authenticité après une plainte client. Nous avons pu présenter les factures d'achat et les éléments prouvant la provenance du stock. L'accompagnement a vraiment fait la différence dans la manière de structurer le recours.", "c": "authenticite"}, {"s": "Mode femme", "t": "Une plainte de marque avait entraîné le retrait d'un produit alors que nous étions revendeur autorisé. L'autorisation et les factures ont été vérifiées puis le dossier a été présenté de façon beaucoup plus claire. Amazon a réactivé l'ASIN.", "c": "pi"}, {"s": "Jouets éducatifs", "t": "Amazon nous demandait de nouveaux documents de sécurité pour plusieurs références jouets. Nous avions des rapports de laboratoire mais pas dans la présentation attendue. Le dossier a été organisé correctement et les ASIN ont été validés.", "c": "conformite"}, {"s": "Décoration intérieure", "t": "Un produit décoratif a été supprimé pour utilisation supposée d'un design protégé. Nous avons été accompagnés pour comprendre la plainte et préparer les éléments de réponse. La contestation a abouti et la fiche a été restaurée.", "c": "pi"}, {"s": "Accessoires automobile", "t": "Amazon avait désactivé une référence pour une mention de compatibilité jugée trompeuse. Le titre, les bullets et les données de compatibilité ont été corrigés. Après envoi du dossier, le produit a été remis en vente.", "c": "asin"}, {"s": "Cosmétique", "t": "Une de nos références a été bloquée après une mise à jour des exigences de conformité. Nous avions l'impression qu'Amazon demandait toujours un nouveau document. L'accompagnement a permis de faire une liste claire des pièces attendues et de finaliser le dossier.", "c": "conformite"}, {"s": "Accessoires de sport", "t": "Notre listing avait été retiré à cause d'une variation non conforme entre plusieurs modèles. Nous avons été conseillés sur la meilleure manière de séparer les références sans perdre l'historique inutilement. Les ASIN ont été réactivés.", "c": "catalogue"}, {"s": "Électronique", "t": "Une demande de conformité IEC avait entraîné la désactivation d'un appareil. Nous n'étions pas certains du rapport à transmettre. Le dossier technique a été vérifié et Amazon a finalement accepté la documentation fournie.", "c": "conformite"}, {"s": "Produits ménagers", "t": "Un produit a été bloqué comme biocide alors qu'il n'était pas commercialisé pour cet usage. L'accompagnement a permis de revoir la fiche, retirer les formulations ambiguës et préparer une explication documentée. Amazon a levé le blocage.", "c": "conformite"}, {"s": "Bien-être", "t": "Notre fiche a été suspendue pour des promesses de résultats trop fortes. Nous ne pensions pas que certaines formulations pouvaient déclencher un contrôle. Le contenu a été corrigé et le recours préparé. La référence est de nouveau active.", "c": "asin"}, {"s": "Accessoires maison", "t": "Nous avions reçu une demande de facture mais la notification avait été envoyée sur une ancienne adresse mail. L'ASIN a été désactivé à l'expiration du délai. L'accompagnement nous a permis de reprendre le dossier après coup et d'obtenir la réactivation.", "c": "asin"}, {"s": "Équipement professionnel", "t": "Amazon avait retiré une référence sans plainte extérieure, uniquement sur la base d'un contrôle interne. Nous avons préparé un dossier complet avec fiche technique, certificats et photos du produit. Le recours a fini par aboutir.", "c": "conformite"}, {"s": "Accessoires gaming", "t": "Une plainte d'authenticité concernait un produit acheté auprès d'un distributeur européen. Amazon refusait les premières factures. Après vérification des informations obligatoires et ajout des justificatifs nécessaires, l'ASIN a été réactivé.", "c": "authenticite"}, {"s": "Chaussures", "t": "Un problème de variation entre coloris et tailles avait entraîné la suppression de plusieurs offres. Nous avons été accompagnés pour remettre le catalogue en conformité sans repartir de zéro. Tout est revenu progressivement.", "c": "catalogue"}, {"s": "Jardinage", "t": "Amazon avait retiré un outil à cause d'une alerte de sécurité. Nous disposions pourtant des documents du fabricant. L'accompagnement nous a permis de répondre avec un dossier beaucoup plus complet et la référence a été rétablie.", "c": "conformite"}, {"s": "Accessoires de bureau", "t": "Une plainte de droit d'auteur sur nos images produit a entraîné un blocage immédiat. Nous avons remplacé les visuels concernés, rassemblé les preuves de création des nouvelles images et soumis une réponse structurée. L'ASIN a été réactivé.", "c": "pi"}, {"s": "Luminaires", "t": "Nous avions plusieurs produits bloqués pour absence de documents de conformité. Le fournisseur nous avait envoyé beaucoup de fichiers mais nous ne savions pas lesquels étaient utiles. Le tri a été fait avec nous et les bons documents ont été transmis.", "c": "conformite"}, {"s": "Hygiène féminine", "t": "Amazon avait classé notre produit dans une catégorie nécessitant des justificatifs supplémentaires. Le dossier de conformité a été repris et les formulations du listing ont été ajustées. Après plusieurs refus auparavant, la référence a finalement été acceptée.", "c": "conformite"}, {"s": "Accessoires bébé", "t": "Une demande de documents de sécurité avait été mal traitée en interne et l'ASIN a été désactivé. L'accompagnement a permis de reconstruire l'historique, récupérer les certificats auprès du fabricant et déposer une nouvelle réponse complète.", "c": "conformite"}, {"s": "Équipement outdoor", "t": "Notre produit avait été considéré comme Restricted Product en raison d'un mot-clé présent dans la fiche. Après analyse, le contenu a été corrigé et les caractéristiques techniques ont été clarifiées. Amazon a levé la restriction.", "c": "conformite"}, {"s": "Accessoires cuisine", "t": "Un ASIN a été supprimé pour non-conformité du contenu alors qu'il vendait depuis plusieurs années. Nous avons repris le titre, les images et les bullets pour identifier ce qui posait problème. Une fois la fiche nettoyée, la réactivation a été acceptée.", "c": "conformite"}, {"s": "Mode enfant", "t": "Une plainte d'authenticité sur une référence enfant avait bloqué l'offre. Nous avons fourni les factures du grossiste et les preuves de relation commerciale. La réponse a été préparée de façon très méthodique et Amazon a réactivé le produit.", "c": "authenticite"}, {"s": "Accessoires électroniques", "t": "Amazon a demandé des documents techniques supplémentaires après un contrôle de sécurité. Nous avons été accompagnés pour comprendre précisément la demande et éviter d'envoyer des documents inutiles. Le dossier a été accepté au second envoi.", "c": "conformite"}, {"s": "Produits de beauté", "t": "Une plainte de marque déposée concernait un terme utilisé dans notre fiche. Nous pensions qu'il s'agissait d'un mot générique. L'accompagnement nous a permis de corriger le contenu et de traiter la plainte correctement. La référence est revenue en ligne.", "c": "pi"}, {"s": "Loisirs créatifs", "t": "Notre bundle a été désactivé car il ne respectait pas les règles de création de lots Amazon. Nous avons été accompagnés pour corriger la structure et les informations du listing. Le produit a pu être remis en vente sans recréer tout le catalogue.", "c": "catalogue"}, {"s": "Équipement auto", "t": "Amazon avait retiré notre produit après un signalement de sécurité. Nous avons préparé un dossier avec photos, notice, caractéristiques techniques et documents du fabricant. La réponse a été prise en compte et l'ASIN a été réactivé.", "c": "conformite"}, {"s": "Maison et jardin", "t": "Une demande de conformité avait été ignorée par erreur et plusieurs ASIN ont été désactivés le même jour. L'accompagnement nous a permis de prioriser les références, préparer les dossiers et récupérer progressivement l'ensemble du catalogue.", "c": "conformite"}, {"s": "Accessoires audio", "t": "Une plainte de brevet a bloqué notre produit alors que notre version était différente de celle concernée. Nous avons été accompagnés pour présenter les différences et fournir les éléments nécessaires. Amazon a accepté la contestation.", "c": "pi"}, {"s": "Textile", "t": "Notre listing a été supprimé à cause de mentions commerciales non conformes dans les images. Nous n'avions pas identifié que le problème venait des visuels. Une fois les images corrigées et la demande relancée, l'ASIN a été remis en vente.", "c": "asin"}, {"s": "Produits pour animaux", "t": "Amazon a retiré une référence à la suite d'un contrôle Health & Safety. Nous avons constitué un dossier avec composition, notice, données fabricant et justificatifs de conformité. Le produit a finalement été réactivé.", "c": "conformite"}, {"s": "Équipement sportif", "t": "Une de nos références principales avait été bloquée pour authenticité après plusieurs retours clients. Les factures et la traçabilité du stock ont été préparées proprement avant contestation. Le dossier a été accepté et l'ASIN est de nouveau actif.", "c": "authenticite"}, {"s": "Décoration et mobilier", "t": "Une plainte de propriété intellectuelle avait désactivé un produit du jour au lendemain. L'accompagnement nous a permis d'identifier précisément le droit invoqué, de corriger le listing et de préparer la réponse adaptée. La référence a été restaurée.", "c": "pi"}, {"s": "Petit électroménager", "t": "Amazon avait bloqué un appareil en demandant plusieurs certificats techniques. Nous avions déjà envoyé des documents mais pas les bons. Le dossier a été revu avec nous et les pièces pertinentes ont été transmises. L'ASIN a finalement été validé.", "c": "conformite"}, {"s": "Accessoires de voyage", "t": "Notre produit avait été retiré sans plainte tierce et les réponses du support restaient très vagues. Après analyse, il s'agissait d'un contrôle Restricted Products. Le dossier de conformité a été préparé et présenté correctement. Amazon a réactivé la référence.", "c": "conformite"}];
+  const AVIS_LABELS = {"compte": "Compte suspendu", "comptes-lies": "Comptes liés", "kyc": "Vérification KYC", "fonds": "Fonds retenus", "pi": "Propriété intellectuelle", "authenticite": "Plainte authenticité", "conformite": "Conformité produit", "catalogue": "Catalogue / variations", "asin": "ASIN bloqué"};
+  let avisFilter = 'all', avisShown = 6;
+
+  function renderAvis(){
+    const grid = document.getElementById('avis-grid');
+    const list = avisFilter === 'all' ? AVIS : AVIS.filter(a => a.c === avisFilter);
+    const slice = list.slice(0, avisShown);
+    grid.innerHTML = slice.map(a => `
+      <article class="avis-card">
+        <div class="top">
+          <span class="stars" aria-label="Note : 5 sur 5">★★★★★</span>
+          <span class="tag">${AVIS_LABELS[a.c]}</span>
+        </div>
+        <p>${a.t}</p>
+        <div class="sect">${a.s}</div>
+      </article>`).join('');
+    const btn = document.getElementById('avis-more-btn');
+    if (list.length > avisShown){
+      btn.style.display = 'inline-flex';
+      btn.textContent = `Afficher plus d'avis (${list.length - avisShown} restants)`;
+    } else {
+      btn.style.display = 'none';
+    }
+  }
+
+  document.querySelectorAll('#avis-filters .fbtn').forEach(b => {
+    b.addEventListener('click', () => {
+      document.querySelectorAll('#avis-filters .fbtn').forEach(x => x.classList.remove('on'));
+      b.classList.add('on');
+      avisFilter = b.dataset.f;
+      avisShown = 6;
+      renderAvis();
+    });
+  });
+  document.getElementById('avis-more-btn').addEventListener('click', () => {
+    avisShown += 9; renderAvis();
+  });
+  renderAvis();
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const btn = item.querySelector('.faq-q');
+    const answer = item.querySelector('.faq-a');
+    btn.addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq-a').style.maxHeight = null;
+      });
+      if(!isOpen){
+        item.classList.add('open');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+
+  // Chip toggle
+  document.querySelectorAll('.chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      chip.classList.toggle('checked');
+      const input = chip.querySelector('input');
+      input.checked = !input.checked;
+    });
+  });
+
+  // ============================================================
+  //  ENVOI DU FORMULAIRE
+  //  Les demandes arrivent sur l'adresse email configurée dans
+  //  le compte Formspree associé à cet identifiant.
+  // ============================================================
+  const FORM_ENDPOINT = "https://formspree.io/f/myegabld";
+
+  const form = document.getElementById('dossier-form');
+  const submitBtn = document.getElementById('submit-btn');
+  const errorBox = document.getElementById('form-error');
+
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    errorBox.style.display = 'none';
+
+    // Regrouper les marketplaces cochées dans le champ caché
+    const selected = Array.from(document.querySelectorAll('#marketplace-chips input:checked'))
+                          .map(i => i.value);
+    document.getElementById('marketplaces').value = selected.join(', ') || 'Non précisé';
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Envoi en cours…';
+
+    try {
+      const response = await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        form.style.display = 'none';
+        document.getElementById('success-box').style.display = 'block';
+      } else {
+        throw new Error('Envoi refusé');
+      }
+    } catch (err) {
+      errorBox.textContent = "L'envoi a échoué. Merci de réessayer, ou de nous écrire directement à hello@compte-amazon-bloque.fr";
+      errorBox.style.display = 'block';
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Transmettre mon dossier';
+    }
+  });
+</script>
+
+</body>
+</html>

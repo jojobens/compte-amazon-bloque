@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://compte-amazon-bloque.fr/sitemap.xml
