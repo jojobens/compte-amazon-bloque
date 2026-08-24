@@ -1112,11 +1112,9 @@
   });
 
   // Chip toggle
-  document.querySelectorAll('.chip').forEach(chip => {
-    chip.addEventListener('click', () => {
-      chip.classList.toggle('checked');
-      const input = chip.querySelector('input');
-      input.checked = !input.checked;
+  document.querySelectorAll('#marketplace-chips input[type="checkbox"]').forEach(input => {
+    input.addEventListener('change', () => {
+      input.closest('.chip').classList.toggle('checked', input.checked);
     });
   });
 
