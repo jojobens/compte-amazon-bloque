@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" role="img" aria-label="Compte Amazon Bloqué">
+  <rect width="32" height="32" rx="7" fill="#16233B"/>
+  <g fill="none">
+    <path d="M12 16 V12 a5 5 0 0 1 9.4 -2.4" stroke="#C97A2E" stroke-width="4" stroke-linecap="round"/>
+    <rect x="8" y="16" width="16" height="12" rx="2.5" fill="#F6F4EF"/>
+  </g>
+</svg>
