@@ -40,7 +40,6 @@ main strong{color:var(--ink)}
 .info-table td:first-child{color:rgba(22,35,59,0.6);width:42%;padding-right:20px}
 .info-table tr:last-child td{border-bottom:none}
 
-.todo{background:var(--amber-soft);border-left:3px solid var(--amber);padding:3px 8px;border-radius:3px;font-weight:600;font-size:0.9em}
 .notice{background:var(--white);border:1px solid var(--line);border-radius:6px;padding:20px 24px;margin:24px 0;font-size:0.92rem}
 .notice strong{display:block;margin-bottom:6px}
 
