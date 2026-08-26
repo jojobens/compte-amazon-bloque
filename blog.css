@@ -86,8 +86,36 @@ header{
 .btn-primary:hover{ box-shadow:0 24px 46px -20px rgba(22,35,59,0.5); }
 .btn-sm{ padding:9px 16px; font-size:0.85rem; }
 
+/* ============================================================
+   CATEGORIES
+   Quatre familles de couleur, traitement uniforme. Le libelle du
+   badge distingue la categorie, la couleur signale la famille.
+   Le rouge est reserve aux mises en cause externes (plainte de
+   propriete intellectuelle, authenticite) et aux encadres de
+   danger. Ne pas l'employer ailleurs, sous peine d'affaiblir le
+   signal d'alerte.
+   ============================================================ */
+.badge{
+  display:inline-block;
+  font-family:'IBM Plex Mono',monospace;
+  font-size:0.68rem; font-weight:500;
+  text-transform:uppercase; letter-spacing:0.08em;
+  padding:5px 11px; border-radius:4px;
+  white-space:nowrap;
+}
+/* famille ambre : compte suspendu, comptes lies */
+.badge--ambre{ background:var(--amber-soft); color:#8A4F16; }
+/* famille bleu secondaire : verification KYC, fonds retenus */
+.badge--bleu{ background:var(--paper-2); color:var(--ink-2); }
+/* famille rouge : propriete intellectuelle, authenticite et factures */
+.badge--rouge{ background:var(--red-soft); color:var(--red); }
+/* famille vert : conformite produit */
+.badge--vert{ background:var(--green-soft); color:var(--green); }
+
+.badge--guide{ background:var(--ink); color:var(--paper); }
+
 /* ---------- EN-TETE DE PAGE ---------- */
-.page-head{ padding:72px 0 44px; border-bottom:1px solid var(--line-soft); }
+.page-head{ padding:66px 0 40px; border-bottom:1px solid var(--line-soft); }
 .eyebrow{
   display:inline-block; font-family:'IBM Plex Mono',monospace;
   font-size:0.72rem; text-transform:uppercase; letter-spacing:0.1em;
@@ -96,47 +124,123 @@ header{
 .page-head h1{ font-size:clamp(2rem, 4.4vw, 3rem); line-height:1.14; max-width:20ch; }
 .page-head p{ margin-top:16px; max-width:64ch; color:rgba(22,35,59,0.72); }
 
-/* ---------- LISTE D'ARTICLES ---------- */
-.post-list{ padding:52px 0 88px; display:grid; gap:22px; }
-@media(min-width:900px){ .post-list{ grid-template-columns:repeat(2,1fr); } }
-.post-card{
-  background:var(--white); border:1px solid var(--line);
-  border-radius:12px; padding:28px 30px;
-  text-decoration:none; display:flex; flex-direction:column; gap:12px;
-  transition:transform .15s ease, box-shadow .15s ease;
+/* ---------- GABARIT LISTE : contenu + colonne laterale ---------- */
+.blog-layout{ padding:44px 0 88px; display:grid; gap:48px; align-items:start; }
+@media(min-width:1000px){ .blog-layout{ grid-template-columns:minmax(0,1fr) 260px; } }
+
+.section-blog{ margin-bottom:52px; }
+.section-blog:last-child{ margin-bottom:0; }
+.section-blog > h2{
+  font-size:1.42rem; margin-bottom:6px;
+  display:flex; align-items:center; gap:12px; flex-wrap:wrap;
 }
-.post-card:hover{ transform:translateY(-2px); box-shadow:var(--shadow); }
-.post-card .tag{
-  font-family:'IBM Plex Mono',monospace; font-size:0.66rem;
-  text-transform:uppercase; letter-spacing:0.08em; color:var(--amber);
-}
-.post-card h2{ font-size:1.32rem; line-height:1.28; }
-.post-card p{ font-size:0.93rem; color:rgba(22,35,59,0.7); }
-.post-card .meta{
-  font-family:'IBM Plex Mono',monospace; font-size:0.72rem;
-  color:rgba(22,35,59,0.5); margin-top:auto; padding-top:6px;
+.section-blog > p.section-intro{
+  color:rgba(22,35,59,0.66); font-size:0.94rem; margin-bottom:22px; max-width:62ch;
 }
 
+/* ---------- CARTES LARGES : guides essentiels ---------- */
+.card-list{ display:grid; gap:20px; }
+.card-large{
+  display:grid; gap:0;
+  background:var(--white); border:1px solid var(--line); border-radius:12px;
+  overflow:hidden; text-decoration:none;
+  transition:transform .15s ease, box-shadow .15s ease;
+}
+@media(min-width:660px){ .card-large{ grid-template-columns:300px minmax(0,1fr); } }
+.card-large:hover{ transform:translateY(-2px); box-shadow:var(--shadow); }
+.card-large .cover{ background:var(--ink); display:flex; align-items:center; }
+/* l'image est affichee entiere : la recadrer couperait le titre de la couverture */
+.card-large .cover img{ width:100%; height:auto; aspect-ratio:1200/630; object-fit:contain; }
+.card-large .body{ padding:24px 26px; display:flex; flex-direction:column; gap:10px; }
+.card-large .badges{ display:flex; gap:8px; flex-wrap:wrap; }
+.card-large h3{ font-size:1.28rem; line-height:1.28; }
+.card-large p{ font-size:0.93rem; color:rgba(22,35,59,0.7); }
+.card-meta{
+  font-family:'IBM Plex Mono',monospace; font-size:0.72rem;
+  color:rgba(22,35,59,0.5); display:flex; gap:10px; flex-wrap:wrap;
+}
+.card-meta > * + *::before{ content:'\00b7'; margin-right:10px; }
+.card-link{
+  margin-top:2px; font-size:0.88rem; font-weight:600; color:var(--amber);
+}
+.card-link::after{ content:' \2192'; }
+
+/* ---------- CARTES COMPACTES : sections par categorie ---------- */
+@media(min-width:700px){ .card-list--compact{ grid-template-columns:repeat(2,1fr); } }
+.card-compact{
+  background:var(--white); border:1px solid var(--line); border-radius:10px;
+  overflow:hidden; text-decoration:none; display:flex; flex-direction:column;
+  transition:transform .15s ease, box-shadow .15s ease;
+}
+.card-compact:hover{ transform:translateY(-2px); box-shadow:var(--shadow); }
+.card-compact .cover img{ width:100%; height:auto; aspect-ratio:1200/630; }
+.card-compact .body{ padding:18px 20px; display:flex; flex-direction:column; gap:8px; flex:1; }
+.card-compact h3{ font-size:1.06rem; line-height:1.3; }
+.card-compact p{ font-size:0.88rem; color:rgba(22,35,59,0.68); }
+.card-compact .card-meta{ margin-top:auto; padding-top:4px; }
+
+/* ---------- COLONNE LATERALE ---------- */
+.sidebar{ display:flex; flex-direction:column; gap:26px; }
+@media(min-width:1000px){ .sidebar{ position:sticky; top:92px; } }
+.side-box{
+  background:var(--white); border:1px solid var(--line);
+  border-radius:10px; padding:22px 24px;
+}
+.side-box h2{
+  font-family:'IBM Plex Mono',monospace; font-size:0.72rem; font-weight:500;
+  text-transform:uppercase; letter-spacing:0.1em; color:rgba(22,35,59,0.6);
+  margin-bottom:14px;
+}
+.cat-list{ list-style:none; }
+.cat-list li{ border-bottom:1px solid var(--line-soft); }
+.cat-list li:last-child{ border-bottom:none; }
+.cat-list a,.cat-list span{
+  display:flex; justify-content:space-between; gap:12px; align-items:baseline;
+  padding:9px 0; font-size:0.9rem; text-decoration:none;
+}
+.cat-list a:hover{ color:var(--amber); }
+.cat-list .n{ font-family:'IBM Plex Mono',monospace; font-size:0.76rem; color:rgba(22,35,59,0.45); }
+.cat-list .vide{ color:rgba(22,35,59,0.38); }
+
 /* ---------- ARTICLE ---------- */
-.article{ padding:52px 0 40px; }
+.article{ padding:34px 0 40px; }
 .article .wrap{ max-width:760px; }
+
+.fil{ font-size:0.8rem; color:rgba(22,35,59,0.55); margin-bottom:22px; }
+.fil ol{ list-style:none; display:flex; flex-wrap:wrap; gap:6px; }
+.fil li::after{ content:'/'; margin-left:6px; color:rgba(22,35,59,0.3); }
+.fil li:last-child::after{ content:''; }
+.fil a{ text-decoration:none; }
+.fil a:hover{ color:var(--amber); }
+.fil [aria-current]{ color:rgba(22,35,59,0.8); }
+
+.article h1{ font-size:clamp(1.9rem, 4vw, 2.7rem); line-height:1.16; margin:12px 0 14px; }
 .article .meta-line{
   font-family:'IBM Plex Mono',monospace; font-size:0.74rem;
-  color:rgba(22,35,59,0.5); margin-bottom:34px;
-  padding-bottom:20px; border-bottom:1px solid var(--line-soft);
+  color:rgba(22,35,59,0.5); display:flex; gap:10px; flex-wrap:wrap;
 }
-.article h2{ font-size:1.62rem; margin:44px 0 14px; line-height:1.26; }
-.article h3{ font-size:1.14rem; margin:28px 0 10px; }
+.article .cover-full{
+  margin:26px 0 30px; border-radius:12px; overflow:hidden; border:1px solid var(--line);
+}
+/* height:auto est indispensable : sans lui l'attribut height du HTML l'emporte
+   sur aspect-ratio et l'image se retrouve recadree */
+.article .cover-full img{ width:100%; height:auto; aspect-ratio:1200/630; }
+
+.article h2{ font-size:1.62rem; margin:44px 0 14px; line-height:1.26; scroll-margin-top:92px; }
+.article h3{ font-size:1.14rem; margin:28px 0 10px; scroll-margin-top:92px; }
 .article p{ margin-bottom:16px; }
 .article ul,.article ol{ margin:0 0 18px 22px; }
 .article li{ margin-bottom:8px; }
 .article strong{ font-weight:600; }
-.article a{ color:var(--amber); text-decoration:underline; text-underline-offset:2px; }
+/* :not(.btn) sinon le bouton d'appel a l'action herite du soulignement
+   et de la couleur ambre des liens de contenu */
+.article a:not(.btn){ color:var(--amber); text-decoration:underline; text-underline-offset:2px; }
 .lede{ font-size:1.12rem; color:rgba(22,35,59,0.82); }
 
+/* sommaire */
 .toc{
   background:var(--paper-2); border:1px solid var(--line-soft);
-  border-radius:10px; padding:22px 26px; margin:0 0 36px;
+  border-radius:10px; padding:22px 26px; margin:0 0 32px;
 }
 .toc h2{
   font-family:'IBM Plex Mono',monospace; font-size:0.72rem; font-weight:500;
@@ -145,16 +249,32 @@ header{
 }
 .toc ol{ margin:0 0 0 18px; font-size:0.92rem; }
 .toc li{ margin-bottom:5px; }
+.toc ol ol{ margin:6px 0 10px 16px; font-size:0.87rem; color:rgba(22,35,59,0.7); }
 .toc a{ color:var(--ink); text-decoration:none; }
 .toc a:hover{ color:var(--amber); }
 
+/* l'essentiel en bref */
+.essentiel{
+  background:var(--white); border:1px solid var(--line);
+  border-left:3px solid var(--amber);
+  border-radius:0 10px 10px 0; padding:24px 28px; margin:0 0 36px;
+}
+.essentiel h2{
+  font-size:1.02rem; margin:0 0 10px;
+  font-family:'IBM Plex Mono',monospace; font-weight:500;
+  text-transform:uppercase; letter-spacing:0.08em; color:var(--amber);
+}
+.essentiel p{ font-size:0.96rem; margin-bottom:10px; }
+.essentiel p:last-child{ margin-bottom:0; }
+
+/* encadres d'alerte : ambre pour l'attention, rouge pour le danger */
 .callout{
   border-left:3px solid var(--amber); background:var(--amber-soft);
   border-radius:0 8px 8px 0; padding:18px 22px; margin:26px 0;
   font-size:0.95rem;
 }
 .callout strong{ display:block; margin-bottom:5px; }
-.warn{ border-left-color:var(--red); background:var(--red-soft); }
+.callout.warn{ border-left-color:var(--red); background:var(--red-soft); }
 
 .delays{ width:100%; border-collapse:collapse; margin:20px 0 26px; font-size:0.92rem; }
 .delays th,.delays td{ text-align:left; padding:11px 14px; border-bottom:1px solid var(--line); vertical-align:top; }
@@ -164,13 +284,43 @@ header{
 }
 .delays td:last-child{ white-space:nowrap; }
 
+/* FAQ */
+.faq{ margin-top:48px; }
+.faq h2{ margin-top:0; }
+.faq .q{ margin:24px 0 8px; font-weight:600; font-size:1rem; }
+.faq .q:first-of-type{ margin-top:16px; }
+
+/* conclusion */
+.conclusion{ margin-top:44px; }
+
+/* appel a l'action */
 .article-cta{
   background:var(--white); border:1px solid var(--line); border-radius:12px;
-  padding:30px 32px; margin:40px 0 0;
+  padding:30px 32px; margin:44px 0 0;
 }
 .article-cta h2{ margin:0 0 10px; font-size:1.3rem; }
 .article-cta p{ font-size:0.95rem; color:rgba(22,35,59,0.72); }
 .article-cta .btn{ margin-top:14px; }
+
+/* bloc auteur */
+.auteur{
+  display:flex; gap:16px; align-items:flex-start;
+  border-top:1px solid var(--line); margin-top:44px; padding-top:26px;
+  font-size:0.92rem; color:rgba(22,35,59,0.72);
+}
+.auteur .mark{
+  width:44px; height:44px; border-radius:9px; background:var(--ink);
+  display:flex; align-items:center; justify-content:center; flex-shrink:0;
+}
+.auteur .mark svg{ width:23px; height:23px; }
+.auteur .mark svg .shackle{ stroke:var(--amber); }
+.auteur .mark svg .body{ fill:var(--paper); }
+.auteur h2{ font-size:1rem; margin:0 0 4px; }
+
+/* articles connexes : masques tant qu'il n'y en a pas */
+.connexes{ margin-top:52px; }
+.connexes:empty{ display:none; }
+.connexes h2{ font-size:1.3rem; margin-bottom:18px; }
 
 /* ---------- FOOTER ---------- */
 footer{
@@ -185,7 +335,7 @@ footer{
 .foot-brand{ max-width:320px; }
 .foot-brand .brand{ color:var(--paper); margin-bottom:14px; }
 .foot-cols{ display:flex; gap:56px; flex-wrap:wrap; }
-.foot-col h4{
+.foot-col h3{
   color:var(--paper); font-size:0.78rem; text-transform:uppercase;
   letter-spacing:0.08em; margin-bottom:14px; font-family:'IBM Plex Mono',monospace; font-weight:500;
 }
@@ -195,4 +345,17 @@ footer{
 .disclaimer{
   margin-top:24px; padding-top:24px; border-top:1px solid rgba(246,244,239,0.12);
   font-size:0.76rem; color:rgba(246,244,239,0.4); max-width:760px;
+}
+
+/* ---------- CORRECTION MOBILE DU HEADER ----------
+   En dessous de 520 px, la marque (dont les espaces sont insecables) et
+   le bouton ne tiennent pas sur une meme rangee : le bouton se repliait
+   sur quatre lignes et recouvrait la marque. Reduire la taille ne suffit
+   pas, la marque deborde encore a 0.72rem. Le header passe donc sur deux
+   rangees. Le meme defaut existe sur index.html, qui n'est pas modifie ici.
+   ------------------------------------------------- */
+@media(max-width:520px){
+  .nav{ flex-wrap:wrap; gap:12px; padding:14px 20px; }
+  .brand{ flex:1 1 100%; font-size:0.98rem; }
+  .nav > .btn-sm{ flex:0 0 auto; white-space:nowrap; }
 }
