@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>document.documentElement.classList.add('js');</script>
 <title>Compte Amazon suspendu ou bloqué : défense et réactivation de votre compte vendeur</title>
 <meta name="description" content="Votre compte vendeur Amazon est suspendu, désactivé, ou un ASIN est bloqué ? Nous analysons les causes, réunissons les preuves et rédigeons la réponse à envoyer à Amazon. Diagnostic écrit sous 48 h.">
 <link rel="canonical" href="https://compte-amazon-bloque.fr/">
@@ -440,7 +441,12 @@
   .fbtn .c{ opacity:0.55; font-size:0.78em; margin-left:4px; }
 
   .avis-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
-  .avis-card.is-masque{ display:none; }
+  /* Le masquage n'a lieu que si le JavaScript est actif : sans lui, les 98 avis
+     restent lisibles et les commandes, devenues inertes, sont retirees. */
+  .js .avis-card.is-masque{ display:none; }
+  .avis-filters, .avis-more{ display:none; }
+  .js .avis-filters{ display:flex; }
+  .js .avis-more{ display:block; }
   @media(max-width:960px){ .avis-grid{grid-template-columns:repeat(2,1fr);} }
   @media(max-width:640px){ .avis-grid{grid-template-columns:1fr;} }
   .avis-card{
