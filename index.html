@@ -606,6 +606,19 @@
     margin-top:24px; padding-top:24px; border-top:1px solid rgba(246,244,239,0.12);
     font-size:0.76rem; color:rgba(246,244,239,0.4); max-width:760px;
   }
+
+  /* ---------- CORRECTION MOBILE DU HEADER ----------
+     Sous 520 px, la marque (aux espaces insecables) et l'element de droite
+     ne tiennent pas sur une meme rangee : l'element de droite se repliait
+     sur plusieurs lignes et recouvrait la marque. Reduire la police ne
+     suffit pas, la marque deborde encore a 0.72rem. Le header passe donc
+     sur deux rangees. Meme solution que blog.css.
+     ------------------------------------------------- */
+  @media(max-width:520px){
+    .nav{ flex-wrap:wrap; gap:12px; padding:14px 20px; }
+    .brand{ flex:1 1 100%; font-size:0.98rem; }
+    .nav > .btn-sm{ flex:0 0 auto; white-space:nowrap; }
+  }
 </style>
 </head>
 <body>
