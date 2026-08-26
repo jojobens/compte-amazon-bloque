@@ -292,6 +292,17 @@
   }
   @media(max-width:920px){ .sit-grid{grid-template-columns:repeat(2,1fr);} }
   @media(max-width:560px){ .sit-grid{grid-template-columns:1fr;} }
+
+  /* ---------- REGLES ---------- */
+  .regles-grid{
+    display:grid; grid-template-columns:repeat(2,1fr); gap:1px;
+    background:var(--line-soft);
+    border:1px solid var(--line-soft);
+    border-radius:6px;
+    overflow:hidden;
+  }
+  @media(max-width:720px){ .regles-grid{grid-template-columns:1fr;} }
+  .regles-grid .sit-card a{ color:var(--amber); text-decoration:underline; text-underline-offset:2px; }
   .sit-card{
     background:var(--white);
     padding:26px 22px;
@@ -787,6 +798,26 @@
           <li>Votre accord écrit à chaque étape avant l'envoi</li>
         </ul>
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="regles">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Cadre applicable</span>
+      <h2>Les règles Amazon sur lesquelles reposent les blocages</h2>
+      <p>Chaque suspension s'appuie sur une règle précise, texte européen ou politique interne à la marketplace. Identifier laquelle est la première étape du dossier&nbsp;: elle détermine les preuves à réunir et le canal de réponse.</p>
+    </div>
+    <div class="regles-grid">
+      <div class="sit-card"><span class="num">01</span><h3>GPSR, sécurité des produits</h3><p>Le règlement impose une personne responsable établie dans l'Union et des avertissements traduits. Les ASIN qui n'y répondent pas sont retirés du catalogue.</p></div>
+      <div class="sit-card"><span class="num">02</span><h3>DSA, traçabilité des vendeurs</h3><p>La marketplace doit vérifier l'identité des vendeurs qu'elle héberge. C'est l'origine des campagnes de vérification documentaire lancées par vagues.</p></div>
+      <div class="sit-card"><span class="num">03</span><h3>P2B, motivation et médiation</h3><p>Amazon doit motiver ses suspensions et respecter un préavis. Une médiation indépendante est prévue, encore rarement mobilisée par les vendeurs.</p></div>
+      <div class="sit-card"><span class="num">04</span><h3>DAC7, déclaration fiscale</h3><p>Amazon déclare vos revenus à l'administration fiscale. Des données incomplètes suffisent à bloquer vos versements, indépendamment de l'état du compte.</p></div>
+      <div class="sit-card"><span class="num">05</span><h3>Section 3, authenticité et factures</h3><p>Facture fournisseur répondant à des critères précis, traçabilité de la chaîne d'approvisionnement, lettre d'autorisation de marque. Le dossier se monte comme <a href="/blog/compte-amazon-bloque-que-faire#plan-action-amazon">un plan d'action Amazon</a>, avec des preuves datées.</p></div>
+      <div class="sit-card"><span class="num">06</span><h3>KYC, vérification d'identité</h3><p>Obligations issues de la lutte anti-blanchiment. Cohérence entre les documents et les informations du compte, vérification vidéo, validation du compte bancaire.</p></div>
+      <div class="sit-card"><span class="num">07</span><h3>Comptes liés</h3><p>Un compte par vendeur, sauf autorisation expresse. La détection est algorithmique et le blocage peut s'étendre d'une marketplace à l'autre, comme le détaille notre guide sur <a href="/blog/compte-amazon-bloque-que-faire#causes-blocage-compte-amazon">les causes réelles d'un blocage</a>.</p></div>
+      <div class="sit-card"><span class="num">08</span><h3>Propriété intellectuelle</h3><p>Plaintes portant sur une marque, un brevet ou un droit d'auteur. La charge de la preuve pèse sur le vendeur, qui doit établir son bon droit.</p></div>
     </div>
   </div>
 </section>
