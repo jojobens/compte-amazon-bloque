@@ -72,6 +72,15 @@ MOTIFS = {
       <rect x="12" y="26" width="76" height="58" rx="8" fill="{c}"/>
       <path d="M12 44 h76" stroke="{i}" stroke-width="4" opacity="0.25"/>
       <path d="M32 62 l12 12 l24 -26" stroke="{a}" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>''',
+    # plan d'action : feuille a trois blocs, pastilles ambre en marge
+    'document-plan': '''
+      <rect x="16" y="10" width="68" height="80" rx="6" fill="{c}"/>
+      <circle cx="30" cy="30" r="4.5" fill="{a}"/>
+      <rect x="40" y="27" width="32" height="6" rx="3" fill="{i}" opacity="0.85"/>
+      <circle cx="30" cy="52" r="4.5" fill="{a}"/>
+      <rect x="40" y="49" width="26" height="6" rx="3" fill="{i}" opacity="0.6"/>
+      <circle cx="30" cy="74" r="4.5" fill="{a}"/>
+      <rect x="40" y="71" width="20" height="6" rx="3" fill="{i}" opacity="0.4"/>''',
     # fonds retenus : piece barree
     'fonds': '''
       <circle cx="50" cy="50" r="34" fill="{c}"/>
