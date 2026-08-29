@@ -313,7 +313,9 @@ header{
   font-family:'IBM Plex Mono',monospace; font-size:0.7rem;
   text-transform:uppercase; letter-spacing:0.06em; color:rgba(22,35,59,0.6); font-weight:500;
 }
-.delays td:last-child{ white-space:nowrap; }
+/* pas de nowrap : la derniere colonne contient des phrases sur certains
+   articles, ce qui faisait deborder la table en dessous de 1024 px */
+.delays td{ overflow-wrap:anywhere; }
 
 /* FAQ */
 .faq{ margin-top:48px; }
@@ -390,3 +392,93 @@ footer{
   .brand{ flex:1 1 100%; font-size:0.98rem; }
   .nav > .btn-sm{ flex:0 0 auto; white-space:nowrap; }
 }
+
+/* ============================================================
+   GABARIT D'ARTICLE A TROIS COLONNES
+   Mise en page partagee par toutes les pages d'article. Le site
+   etant statique, c'est ici que vit le layout : les fichiers
+   d'article ne portent que le squelette de la grille.
+   ============================================================ */
+
+.article-layout{
+  max-width:1360px; margin:0 auto; padding:0 28px;
+  display:grid; gap:40px; align-items:start;
+}
+/* Ordre d'empilement mobile : contenu, sommaire, puis colonne laterale */
+.article-layout > .article{ order:1; min-width:0; }
+.article-layout > .col-toc{ order:2; }
+.article-layout > .col-aside{ order:3; }
+
+@media(min-width:1024px){
+  .article-layout{
+    grid-template-columns:240px minmax(0,1fr) 300px;
+    gap:44px;
+  }
+  .article-layout > .col-toc{ order:0; grid-column:1; }
+  .article-layout > .article{ order:0; grid-column:2; }
+  .article-layout > .col-aside{ order:0; grid-column:3; }
+  .article-layout > .col-toc,
+  .article-layout > .col-aside{
+    position:sticky; top:92px; align-self:start;
+  }
+}
+@media(max-width:768px){
+  .article-layout{ padding:0 20px; gap:28px; }
+}
+
+/* en trois colonnes, le corps n'a plus besoin de son propre conteneur */
+.article-layout .article{ padding:34px 0 40px; }
+.article-layout .article > .wrap{ max-width:760px; margin:0; padding:0; }
+
+/* ---------- COLONNE GAUCHE : sommaire ---------- */
+.col-toc .toc{
+  margin:0; max-height:calc(100vh - 130px); overflow-y:auto;
+}
+.col-toc .toc summary{
+  list-style:none; cursor:pointer;
+  display:flex; align-items:center; justify-content:space-between; gap:10px;
+}
+.col-toc .toc summary::-webkit-details-marker{ display:none; }
+.col-toc .toc summary h2{ margin:0; }
+/* chevron indiquant le repli, uniquement quand le sommaire est repliable */
+.col-toc .toc summary::after{
+  content:''; width:7px; height:7px; flex-shrink:0;
+  border-right:2px solid rgba(22,35,59,0.45);
+  border-bottom:2px solid rgba(22,35,59,0.45);
+  transform:rotate(45deg); transition:transform .2s ease;
+}
+.col-toc .toc[open] summary::after{ transform:rotate(-135deg); }
+.col-toc .toc ol{ margin-top:12px; }
+@media(min-width:1024px){
+  /* En colonne, le sommaire est toujours deplie et non repliable.
+     Le HTML est servi avec l'attribut open : sans JavaScript, le sommaire
+     est donc ouvert a toutes les largeurs. Le script ne fait que le replier
+     sous 1024 px. */
+  .col-toc .toc summary{ cursor:default; pointer-events:none; }
+  .col-toc .toc summary::after{ display:none; }
+}
+/* section active, mise en evidence par le scrollspy */
+.col-toc .toc a.actif{
+  color:var(--amber); font-weight:600;
+}
+
+/* ---------- COLONNE DROITE ---------- */
+.col-aside{ display:flex; flex-direction:column; gap:20px; }
+.side-auteur{ display:flex; flex-direction:column; gap:12px; }
+.side-auteur .mark{
+  width:40px; height:40px; border-radius:9px; background:var(--ink);
+  display:flex; align-items:center; justify-content:center; flex-shrink:0;
+}
+.side-auteur .mark svg{ width:21px; height:21px; }
+.side-auteur .mark svg .shackle{ stroke:var(--amber); }
+.side-auteur .mark svg .body{ fill:var(--paper); }
+/* le nom de l'agence est un nom propre, pas une etiquette de section :
+   il ne doit pas heriter du mono capitales de .side-box h2 */
+.side-auteur h2{
+  font-family:'Fraunces',serif; font-size:1.02rem; font-weight:600;
+  text-transform:none; letter-spacing:-0.01em; color:var(--ink); margin:0;
+}
+.side-auteur p{ font-size:0.88rem; color:rgba(22,35,59,0.7); margin:0; }
+.side-cta h2{ font-size:1.05rem; margin:0 0 8px; }
+.side-cta p{ font-size:0.88rem; color:rgba(22,35,59,0.7); margin:0 0 14px; }
+.side-cta .btn{ width:100%; justify-content:center; }
